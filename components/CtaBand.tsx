@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 interface Props {
   title?: React.ReactNode;
   sub?: string;
@@ -25,9 +27,9 @@ export default function CtaBand({
           <a href="http://pf.kakao.com/_AxmxdJn" target="_blank" rel="noopener noreferrer" className="btn solid">
             💬 카카오톡 상담
           </a>
-          <a href="mailto:contact@hrjs.co.kr" className="btn line">
+          <Link href="/contact/" className="btn line">
             상담 신청
-          </a>
+          </Link>
         </div>
       </div>
     </div>

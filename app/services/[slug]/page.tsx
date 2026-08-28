@@ -53,7 +53,6 @@ export default async function ServicePage({
             <Link href="/">홈</Link> &nbsp;›&nbsp; <Link href="/#work">업무분야</Link> &nbsp;›&nbsp;{' '}
             {svc.title}
           </div>
-          <div className="circ">{svc.mark}</div>
           <h1>
             {svc.title}
             {svc.titleNote && <span className="note"> {svc.titleNote}</span>}

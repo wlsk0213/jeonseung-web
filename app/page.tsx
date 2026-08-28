@@ -1,6 +1,20 @@
 import Link from 'next/link';
 import CtaBand from '@/components/CtaBand';
 import { services } from '@/lib/services';
+import { newsItems } from '@/lib/news';
+import { hrNewsItems } from '@/lib/hrnews';
+
+const workDesc: Record<string, string> = {
+  'industrial-safety': '중대재해처벌법이 요구하는 안전보건관리체계를 구축하고, 반기 점검까지 관리합니다.',
+  'hr-advisory': '월 자문으로 취업규칙·임금·근로시간 등 기업의 노무 리스크를 상시 관리합니다.',
+  payroll: '급여 계산부터 4대보험·임금명세서 발급까지 원스톱으로 대행합니다.',
+  'case-representation': '부당해고·임금체불 등 노동위원회·노동청 사건을 대리합니다.',
+  'workplace-harassment': '외부 조사위원의 공정한 조사와 판단·조치·예방까지 지원합니다.',
+  'hr-consulting': '임금체계·평가제도 등 인사제도를 조직 성장 단계에 맞게 설계합니다.',
+  'risk-assessment': '법정 요건을 갖춘 현장 실사 기반 위험성평가 체계를 만듭니다.',
+  'sanjae-center': '산재 신청부터 불승인 이의절차까지, 재해자의 편에서 대리합니다.',
+  education: '법정의무교육부터 관리자 노무 교육까지, 전국 어디든 출강합니다.',
+};
 
 export default function Home() {
   return (
@@ -9,9 +23,9 @@ export default function Home() {
         <div className="wrap">
           <div className="eyebrow">천안 · 충남 중부권에서, 전국으로</div>
           <h1 className="serif">
-            노무 문제의 예방부터 회복까지,
+            300여 기업이 믿고 맡기는
             <br />
-            <strong>전승이 끝까지 함께합니다</strong>
+            <strong>노무 파트너, 노무법인 전승</strong>
           </h1>
           <p className="lede">
             노무법인 전승은 충남 천안의 노무법인으로, 대표 전지나 노무사가 기업 인사노무 자문과
@@ -19,9 +33,9 @@ export default function Home() {
             중심으로 충남 중부권을 넘어 전국의 사건과 자문에 대응합니다.
           </p>
           <div className="cta-row">
-            <a href="#contact" className="btn-solid">
+            <Link href="/contact/" className="btn-solid">
               상담 문의하기
-            </a>
+            </Link>
             <a href="#work" className="btn-line">
               업무분야 보기
             </a>
@@ -33,19 +47,19 @@ export default function Home() {
         <div className="wrap">
           <div className="core-grid">
             <Link className="core-card" href="/services/hr-advisory/">
-              <div className="no">BUSINESS ⓐ</div>
+              <div className="no">BUSINESS 01</div>
               <h3>기업 인사·노무 자문</h3>
               <p>취업규칙·임금체계 정비부터 분쟁 예방까지, 월 자문으로 기업의 노무 리스크를 상시 관리합니다.</p>
               <span className="go">자세히 보기 →</span>
             </Link>
             <Link className="core-card" href="/services/industrial-safety/">
-              <div className="no">BUSINESS ⓑ</div>
+              <div className="no">BUSINESS 02</div>
               <h3>산업안전·중대재해 예방</h3>
               <p>중대재해처벌법 대응 체계와 위험성평가를 실무 수준으로 구축합니다. 건설현장 특화 노하우 보유.</p>
               <span className="go">자세히 보기 →</span>
             </Link>
             <Link className="core-card" href="/services/sanjae-center/">
-              <div className="no">BUSINESS ⓒ</div>
+              <div className="no">BUSINESS 03</div>
               <h3>산업재해 보상</h3>
               <p>산재 신청부터 불승인 이의신청, 유족급여까지. 재해 근로자의 편에서 절차를 대리합니다.</p>
               <span className="go">자세히 보기 →</span>
@@ -85,9 +99,11 @@ export default function Home() {
           <div className="work-grid">
             {services.map((s) => (
               <Link key={s.slug} className="work-item" href={`/services/${s.slug}/`}>
-                <span className="circ">{s.mark}</span>
-                {s.navLabel}
-                <span className="arrow">→</span>
+                <div className="work-top">
+                  {s.navLabel}
+                  <span className="arrow">→</span>
+                </div>
+                <p className="work-desc">{workDesc[s.slug]}</p>
               </Link>
             ))}
           </div>
@@ -102,9 +118,9 @@ export default function Home() {
               전지나 <small>대표 공인노무사</small>
             </h2>
             <p className="quote">
-              &ldquo;기업에게는 사고 없는 일터를,
+              &ldquo;산업안전은 가장 깊게, 인사노무는 가장 넓게.
               <br />
-              근로자에게는 정당한 권리를.&rdquo;
+              기업 노무의 모든 순간에 전문가의 답을 드립니다.&rdquo;
             </p>
             <ul className="cred">
               <li><b>(현)</b> 노무법인 전승 대표노무사</li>
@@ -162,46 +178,30 @@ export default function Home() {
           <div className="news-cols">
             <div className="news-col">
               <h3>
-                법인 소식 <a href="#">전체 보기 →</a>
+                법인 소식 <Link href="/news/">전체 보기 →</Link>
               </h3>
               <div className="news-list">
-                <a className="news-row" href="#">
-                  <span className="badge">협약</span>
-                  <span className="t">노무 자문 업무협약 체결 소식</span>
-                  <span className="d">2026.08</span>
-                </a>
-                <a className="news-row" href="#">
-                  <span className="badge">교육</span>
-                  <span className="t">중대재해처벌법 대응 실무 세미나 개최 안내</span>
-                  <span className="d">2026.08</span>
-                </a>
-                <a className="news-row" href="#">
-                  <span className="badge">활동</span>
-                  <span className="t">전지나 대표 강의 출강 소식</span>
-                  <span className="d">2026.07</span>
-                </a>
+                {newsItems.slice(0, 4).map((n) => (
+                  <Link className="news-row" href="/news/" key={n.title}>
+                    <span className="badge">{n.badge}</span>
+                    <span className="t">{n.title}</span>
+                    <span className="d">{n.date}</span>
+                  </Link>
+                ))}
               </div>
             </div>
             <div className="news-col">
               <h3>
-                HR뉴스 <a href="#">전체 보기 →</a>
+                HR뉴스 <Link href="/hrnews/">전체 보기 →</Link>
               </h3>
               <div className="news-list">
-                <a className="news-row" href="#">
-                  <span className="badge">법령</span>
-                  <span className="t">최저임금 고시 — 사업장 임금체계 점검 사항</span>
-                  <span className="d">2026.08</span>
-                </a>
-                <a className="news-row" href="#">
-                  <span className="badge">행정</span>
-                  <span className="t">고용노동부 사업장 근로감독 계획 발표</span>
-                  <span className="d">2026.08</span>
-                </a>
-                <a className="news-row" href="#">
-                  <span className="badge">안전</span>
-                  <span className="t">중대재해처벌법 수사 동향과 점검 포인트</span>
-                  <span className="d">2026.07</span>
-                </a>
+                {hrNewsItems.slice(0, 4).map((n) => (
+                  <Link className="news-row" href="/hrnews/" key={n.title}>
+                    <span className="badge">{n.badge}</span>
+                    <span className="t">{n.title}</span>
+                    <span className="d">{n.date}</span>
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
