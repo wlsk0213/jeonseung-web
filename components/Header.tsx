@@ -18,7 +18,11 @@ export default function Header() {
         <div className="wrap">
           <Link href="/" className="logo">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo-horizontal.png" alt="노무법인 전승" className="logo-img" />
+            <img
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo-horizontal.png`}
+              alt="노무법인 전승"
+              className="logo-img"
+            />
           </Link>
           <nav className="menu">
             <Link href="/#work">업무분야</Link>
