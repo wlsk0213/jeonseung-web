@@ -1,0 +1,256 @@
+import Link from 'next/link';
+import CtaBand from '@/components/CtaBand';
+import { services } from '@/lib/services';
+
+export default function Home() {
+  return (
+    <main>
+      <div className="hero">
+        <div className="wrap">
+          <div className="eyebrow">천안 · 충남 중부권에서, 전국으로</div>
+          <h1 className="serif">
+            노무 문제의 예방부터 회복까지,
+            <br />
+            <strong>전승이 끝까지 함께합니다</strong>
+          </h1>
+          <p className="lede">
+            노무법인 전승은 충남 천안의 노무법인으로, 대표 전지나 노무사가 기업 인사노무 자문과
+            산업안전·중대재해 예방 컨설팅, 재해 근로자의 산재보상을 전문으로 합니다. 천안·아산을
+            중심으로 충남 중부권을 넘어 전국의 사건과 자문에 대응합니다.
+          </p>
+          <div className="cta-row">
+            <a href="#contact" className="btn-solid">
+              상담 문의하기
+            </a>
+            <a href="#work" className="btn-line">
+              업무분야 보기
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="core">
+        <div className="wrap">
+          <div className="core-grid">
+            <Link className="core-card" href="/services/hr-advisory/">
+              <div className="no">BUSINESS ⓐ</div>
+              <h3>기업 인사·노무 자문</h3>
+              <p>취업규칙·임금체계 정비부터 분쟁 예방까지, 월 자문으로 기업의 노무 리스크를 상시 관리합니다.</p>
+              <span className="go">자세히 보기 →</span>
+            </Link>
+            <Link className="core-card" href="/services/industrial-safety/">
+              <div className="no">BUSINESS ⓑ</div>
+              <h3>산업안전·중대재해 예방</h3>
+              <p>중대재해처벌법 대응 체계와 위험성평가를 실무 수준으로 구축합니다. 건설현장 특화 노하우 보유.</p>
+              <span className="go">자세히 보기 →</span>
+            </Link>
+            <Link className="core-card" href="/services/sanjae-center/">
+              <div className="no">BUSINESS ⓒ</div>
+              <h3>산업재해 보상</h3>
+              <p>산재 신청부터 불승인 이의신청, 유족급여까지. 재해 근로자의 편에서 절차를 대리합니다.</p>
+              <span className="go">자세히 보기 →</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      <div className="trust">
+        <div className="wrap">
+          <div>
+            <div className="num">2021</div>
+            <div className="lbl">법인 설립</div>
+          </div>
+          <div>
+            <div className="num">300+</div>
+            <div className="lbl">자문 기업</div>
+          </div>
+          <div>
+            <div className="num">500+</div>
+            <div className="lbl">누적 처리 사건</div>
+          </div>
+          <div>
+            <div className="num">20</div>
+            <div className="lbl">전문 구성원</div>
+          </div>
+        </div>
+      </div>
+
+      <section id="work">
+        <div className="wrap">
+          <div className="sec-head">
+            <div className="eyebrow">PRACTICE AREAS</div>
+            <h2 className="serif">업무분야</h2>
+            <p>각 분야를 선택하면 상세 안내 페이지로 연결됩니다.</p>
+          </div>
+          <div className="work-grid">
+            {services.map((s) => (
+              <Link key={s.slug} className="work-item" href={`/services/${s.slug}/`}>
+                <span className="circ">{s.mark}</span>
+                {s.navLabel}
+                <span className="arrow">→</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="profile" id="profile">
+        <div className="wrap">
+          <div className="inner">
+            <div className="eyebrow">MEMBERS</div>
+            <h2 className="serif">
+              전지나 <small>대표 공인노무사</small>
+            </h2>
+            <p className="quote">
+              &ldquo;기업에게는 사고 없는 일터를,
+              <br />
+              근로자에게는 정당한 권리를.&rdquo;
+            </p>
+            <ul className="cred">
+              <li><b>(현)</b> 노무법인 전승 대표노무사</li>
+              <li><b>(현)</b> 충청남도 갑질 및 괴롭힘 예방 안심노무사</li>
+              <li><b>(현)</b> 충청남도의회 갑질 상담 조사관</li>
+              <li><b>(현)</b> 충청남도 민관협치 협의회 위원</li>
+              <li><b>(현)</b> 코레일테크(주) 고충심의위원</li>
+              <li><b>(현)</b> 산림청 기타 공공기관 경영평가위원</li>
+              <li><b>(현)</b> 충남문화관광재단 전문상담위원</li>
+              <li><b>(현)</b> 중소벤처기업부 비즈니스지원단 상담위원</li>
+              <li><b>(현)</b> 충청남도 지속가능발전협의회 위원</li>
+              <li><b>(전)</b> 행정안전부 산하기관 경영평가 위원</li>
+            </ul>
+            <Link href="/members/" className="more">
+              구성원 전체 보기 →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section id="insights">
+        <div className="wrap">
+          <div className="sec-head">
+            <div className="eyebrow">INSIGHTS</div>
+            <h2 className="serif">전승 인사이트</h2>
+            <p>실제 상담에서 가장 많이 받는 질문에, 근거 조문과 함께 답합니다.</p>
+          </div>
+          <div className="ins-grid">
+            <div className="ins">
+              <span className="cat">인사·노무 자문</span>
+              <h3>5인 미만 사업장도 해고 예고수당을 줘야 하나요?</h3>
+              <span className="date">2026. 08. · 전지나 노무사</span>
+            </div>
+            <div className="ins">
+              <span className="cat">산업안전·중대재해</span>
+              <h3>상시근로자 5인 사업장, 중대재해처벌법 적용될까? 판단 기준 정리</h3>
+              <span className="date">2026. 08. · 전지나 노무사</span>
+            </div>
+            <div className="ins">
+              <span className="cat">산업재해 보상</span>
+              <h3>산재 불승인 통지를 받았다면 — 90일 안에 해야 할 일</h3>
+              <span className="date">2026. 08. · 전지나 노무사</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="news" id="news">
+        <div className="wrap">
+          <div className="sec-head">
+            <div className="eyebrow">NEWS</div>
+            <h2 className="serif">소식</h2>
+            <p>노무법인 전승의 활동과, 인사담당자가 놓치면 안 되는 노동법 소식</p>
+          </div>
+          <div className="news-cols">
+            <div className="news-col">
+              <h3>
+                법인 소식 <a href="#">전체 보기 →</a>
+              </h3>
+              <div className="news-list">
+                <a className="news-row" href="#">
+                  <span className="badge">협약</span>
+                  <span className="t">노무 자문 업무협약 체결 소식</span>
+                  <span className="d">2026.08</span>
+                </a>
+                <a className="news-row" href="#">
+                  <span className="badge">교육</span>
+                  <span className="t">중대재해처벌법 대응 실무 세미나 개최 안내</span>
+                  <span className="d">2026.08</span>
+                </a>
+                <a className="news-row" href="#">
+                  <span className="badge">활동</span>
+                  <span className="t">전지나 대표 강의 출강 소식</span>
+                  <span className="d">2026.07</span>
+                </a>
+              </div>
+            </div>
+            <div className="news-col">
+              <h3>
+                HR뉴스 <a href="#">전체 보기 →</a>
+              </h3>
+              <div className="news-list">
+                <a className="news-row" href="#">
+                  <span className="badge">법령</span>
+                  <span className="t">최저임금 고시 — 사업장 임금체계 점검 사항</span>
+                  <span className="d">2026.08</span>
+                </a>
+                <a className="news-row" href="#">
+                  <span className="badge">행정</span>
+                  <span className="t">고용노동부 사업장 근로감독 계획 발표</span>
+                  <span className="d">2026.08</span>
+                </a>
+                <a className="news-row" href="#">
+                  <span className="badge">안전</span>
+                  <span className="t">중대재해처벌법 수사 동향과 점검 포인트</span>
+                  <span className="d">2026.07</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="faqsec" id="faq" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="sec-head" style={{ paddingTop: 68 }}>
+            <div className="eyebrow">FAQ</div>
+            <h2 className="serif">자주 묻는 질문</h2>
+          </div>
+          <div className="faq-list">
+            <details open>
+              <summary>직원 10명 규모 회사인데, 노무사 자문이 꼭 필요한가요?</summary>
+              <p>
+                5인 이상 사업장부터 근로기준법 대부분이 적용되어 해고 제한, 연장근로 한도, 연차휴가
+                의무가 발생합니다. 분쟁 발생 후 대응 비용이 예방 자문 비용의 수 배에 이르는 경우가
+                많아, 10인 규모라면 월 자문으로 리스크를 관리하는 것이 일반적입니다.
+              </p>
+            </details>
+            <details>
+              <summary>산재 신청은 회사가 해주는 것 아닌가요?</summary>
+              <p>
+                아닙니다. 산재 신청의 주체는 재해를 입은 근로자 본인이며, 회사의 동의나 확인 없이도
+                근로복지공단에 직접 신청할 수 있습니다. 회사가 협조하지 않는 경우에도 신청 가능하며,
+                이때 입증 자료 준비가 중요합니다.
+              </p>
+            </details>
+            <details>
+              <summary>중대재해처벌법은 우리 회사에도 적용되나요?</summary>
+              <p>
+                2024년 1월부터 상시근로자 5인 이상 모든 사업장으로 적용이 확대되었습니다. 업종과
+                무관하게 안전보건관리체계 구축 의무가 있으며, 미이행 상태에서 중대재해가 발생하면
+                경영책임자가 처벌 대상이 될 수 있습니다.
+              </p>
+            </details>
+            <details>
+              <summary>상담 비용은 어떻게 되나요?</summary>
+              <p>
+                최초 전화·방문 상담에서 사건의 방향과 예상 비용을 안내해 드립니다. 자문계약·사건위임
+                비용 기준은 상담 시 투명하게 설명드립니다.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <CtaBand />
+    </main>
+  );
+}
