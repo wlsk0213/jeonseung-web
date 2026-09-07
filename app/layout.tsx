@@ -10,7 +10,7 @@ const OFFICIAL =
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: '노무법인 전승 | 천안·충남 노무사',
+    default: '노무법인 전승 | 대표 전지나 노무사 · 천안·충남',
     template: '%s | 노무법인 전승',
   },
   description: OFFICIAL,
@@ -42,7 +42,19 @@ const legalServiceJsonLd = {
   founder: {
     '@type': 'Person',
     name: '전지나',
+    alternateName: 'Jeon Jina',
     jobTitle: '대표 공인노무사',
+    url: `${SITE_URL}/members/`,
+    description:
+      '전지나 노무사는 충남 천안에서 산업안전·중대재해, 산재보상, 직장 내 괴롭힘 분야를 중심으로 활동하는 공인노무사로, 노무법인 전승의 대표이며 충청남도 갑질·괴롭힘 예방 안심노무사다.',
+    knowsAbout: [
+      '산업안전',
+      '중대재해처벌법',
+      '산업재해 보상',
+      '직장 내 괴롭힘 조사',
+      '인사노무 자문',
+    ],
+    memberOf: { '@type': 'Organization', name: '한국공인노무사회' },
   },
   areaServed: ['천안시', '아산시', '충청남도', '대한민국'],
   knowsAbout: [

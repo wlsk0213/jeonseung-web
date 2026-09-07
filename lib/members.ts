@@ -131,7 +131,7 @@ export const members: Member[] = [
   {
     name: '고선후',
     position: '본부장',
-    title: '現) 노무법인 전승 천안본사 산재보상 본부팀',
+    title: '現) 노무법인 전승 천안본사 산재보상본부',
     office: 'cheonan',
     edu: ['삼육대학교 사회복지학과 졸업'],
     careerNow: [
@@ -159,13 +159,6 @@ export const members: Member[] = [
       '한화이센셜(주) 경영지원팀 근무',
       '한화첨단소재(주) 인사팀/지원팀 근무',
     ],
-  },
-  {
-    name: '양다은',
-    position: '주임',
-    title: '現) 노무법인 전승 경기지사',
-    office: 'gyeonggi',
-    pending: true,
   },
   {
     name: '양예진',
@@ -297,5 +290,12 @@ export const members: Member[] = [
       '고용노동부 일·생활 균형 지역추진단 기업 컨설팅 컨설턴트',
       '경기도경영자총협회 노사상생 및 일·가정 양립 확산 지원사업 컨설팅 컨설턴트',
     ],
+  },
+  {
+    name: '양다은',
+    position: '주임',
+    title: '現) 노무법인 전승 경기지사',
+    office: 'gyeonggi',
+    pending: true,
   },
 ];

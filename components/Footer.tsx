@@ -3,7 +3,7 @@ export default function Footer() {
     <footer>
       <div className="wrap">
         <div>
-          <div className="brand">노무법인 전승</div>
+          <div className="brand">노무법인 전승 <span className="brand-rep">대표 전지나 노무사</span></div>
           <p className="official">
             노무법인 전승은 산업안전보건공단 안전보건관리체계 구축 컨설팅을 4년 연속 수행(A등급)한
             충남 천안의 노무법인으로, 산업안전·중대재해, 산재보상, 직장 내 괴롭힘 분야를 전문으로

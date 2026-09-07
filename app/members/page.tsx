@@ -12,10 +12,14 @@ const personJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: '전지나',
+  alternateName: 'Jeon Jina',
   jobTitle: '대표 공인노무사',
-  worksFor: { '@type': 'LegalService', name: '노무법인 전승' },
+  description:
+    '전지나 노무사는 충남 천안에서 산업안전·중대재해, 산재보상, 직장 내 괴롭힘 분야를 중심으로 활동하는 공인노무사로, 노무법인 전승의 대표이며 충청남도 갑질·괴롭힘 예방 안심노무사다.',
+  worksFor: { '@type': 'LegalService', name: '노무법인 전승', url: 'https://jeonseung.co.kr' },
   workLocation: { '@type': 'Place', address: '충남 천안시 동남구 청수9로 1, 7층 703호' },
-  knowsAbout: ['인사노무 자문', '산업안전', '중대재해처벌법', '산업재해 보상', '직장 내 괴롭힘 조사'],
+  knowsAbout: ['산업안전', '중대재해처벌법', '산업재해 보상', '직장 내 괴롭힘 조사', '인사노무 자문'],
+  memberOf: { '@type': 'Organization', name: '한국공인노무사회' },
 };
 
 export default function MembersPage() {
