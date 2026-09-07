@@ -28,9 +28,9 @@ export default function Home() {
             <strong>노무 파트너, 노무법인 전승</strong>
           </h1>
           <p className="lede">
-            노무법인 전승은 충남 천안의 노무법인으로, 대표 전지나 노무사가 기업 인사노무 자문과
-            산업안전·중대재해 예방 컨설팅, 재해 근로자의 산재보상을 전문으로 합니다. 천안·아산을
-            중심으로 충남 중부권을 넘어 전국의 사건과 자문에 대응합니다.
+            노무법인 전승은 산업안전보건공단 안전보건관리체계 구축 컨설팅을 4년 연속 수행(A등급)한
+            충남 천안의 노무법인으로, 산업안전·중대재해, 산재보상, 직장 내 괴롭힘 분야를 전문으로
+            합니다.
           </p>
           <div className="cta-row">
             <Link href="/contact/" className="btn-solid">
@@ -46,22 +46,22 @@ export default function Home() {
       <div className="core">
         <div className="wrap">
           <div className="core-grid">
-            <Link className="core-card" href="/services/hr-advisory/">
-              <div className="no">BUSINESS 01</div>
-              <h3>기업 인사·노무 자문</h3>
-              <p>취업규칙·임금체계 정비부터 분쟁 예방까지, 월 자문으로 기업의 노무 리스크를 상시 관리합니다.</p>
-              <span className="go">자세히 보기 →</span>
-            </Link>
             <Link className="core-card" href="/services/industrial-safety/">
-              <div className="no">BUSINESS 02</div>
-              <h3>산업안전·중대재해 예방</h3>
-              <p>중대재해처벌법 대응 체계와 위험성평가를 실무 수준으로 구축합니다. 건설현장 특화 노하우 보유.</p>
+              <div className="no">BUSINESS 01</div>
+              <h3>산업안전·중대재해</h3>
+              <p>산업안전보건공단 안전보건관리체계 구축 컨설팅 4년 연속 수행(A등급). 공공기관 위험성평가 컨설팅 경험으로 실무 수준의 예방 체계를 만듭니다.</p>
               <span className="go">자세히 보기 →</span>
             </Link>
             <Link className="core-card" href="/services/sanjae-center/">
+              <div className="no">BUSINESS 02</div>
+              <h3>산재보상</h3>
+              <p>산재 신청부터 불승인 이의신청, 유족급여까지. 전담 본부팀이 재해 근로자의 편에서 절차를 대리합니다.</p>
+              <span className="go">자세히 보기 →</span>
+            </Link>
+            <Link className="core-card" href="/services/workplace-harassment/">
               <div className="no">BUSINESS 03</div>
-              <h3>산업재해 보상</h3>
-              <p>산재 신청부터 불승인 이의신청, 유족급여까지. 재해 근로자의 편에서 절차를 대리합니다.</p>
+              <h3>직장 내 괴롭힘 조사·대응</h3>
+              <p>충청남도 갑질·괴롭힘 예방 안심노무사인 대표 노무사가 외부 조사위원으로서 공정한 조사와 조치·예방을 수행합니다.</p>
               <span className="go">자세히 보기 →</span>
             </Link>
           </div>
@@ -126,13 +126,13 @@ export default function Home() {
               <li><b>(현)</b> 노무법인 전승 대표노무사</li>
               <li><b>(현)</b> 충청남도 갑질 및 괴롭힘 예방 안심노무사</li>
               <li><b>(현)</b> 충청남도의회 갑질 상담 조사관</li>
-              <li><b>(현)</b> 충청남도 민관협치 협의회 위원</li>
-              <li><b>(현)</b> 코레일테크(주) 고충심의위원</li>
+              <li><b>(현)</b> 코레일테크(주) 고충심의위원·징계심의위원</li>
+              <li><b>(현)</b> 한국가스기술공사 감사심의위원·고충심의위원</li>
               <li><b>(현)</b> 산림청 기타 공공기관 경영평가위원</li>
+              <li><b>(현)</b> 국가수리과학연구소 인권경영위원</li>
               <li><b>(현)</b> 충남문화관광재단 전문상담위원</li>
               <li><b>(현)</b> 중소벤처기업부 비즈니스지원단 상담위원</li>
-              <li><b>(현)</b> 충청남도 지속가능발전협의회 위원</li>
-              <li><b>(전)</b> 행정안전부 산하기관 경영평가 위원</li>
+              <li><b>(전)</b> 노동위원회 국선노무사</li>
             </ul>
             <Link href="/members/" className="more">
               구성원 전체 보기 →

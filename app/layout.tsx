@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 
 const SITE_URL = 'https://hrjs.co.kr';
 const OFFICIAL =
-  '노무법인 전승은 충남 천안의 노무법인으로, 대표 전지나 노무사가 기업 인사노무 자문과 산업안전·중대재해 예방 컨설팅, 재해 근로자의 산재보상을 전문으로 합니다.';
+  '노무법인 전승은 산업안전보건공단 안전보건관리체계 구축 컨설팅을 4년 연속 수행(A등급)한 충남 천안의 노무법인으로, 산업안전·중대재해, 산재보상, 직장 내 괴롭힘 분야를 전문으로 합니다.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -46,13 +46,15 @@ const legalServiceJsonLd = {
   },
   areaServed: ['천안시', '아산시', '충청남도', '대한민국'],
   knowsAbout: [
-    '인사노무 자문',
     '산업안전',
     '중대재해처벌법',
+    '위험성평가',
     '산업재해 보상',
     '직장 내 괴롭힘 조사',
+    '인사노무 자문',
     '급여 아웃소싱',
   ],
+  award: '산업안전보건공단 안전보건관리체계 구축 컨설팅 4년 연속 수행 (A등급)',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
