@@ -11,18 +11,18 @@
 - 대응 지역: 천안·아산·충남 중부권 중심, 전국 대응
 
 ## 업무분야
-- [산업안전·중대재해](https://hrjs.co.kr/services/industrial-safety/): 중대재해처벌법 안전보건관리체계 구축·이행
-- [인사·노무 자문](https://hrjs.co.kr/services/hr-advisory/): 기업 월 자문, 취업규칙·근로계약 정비
-- [급여 아웃소싱](https://hrjs.co.kr/services/payroll/): 급여 계산, 4대보험, 임금명세서
-- [사건 대리](https://hrjs.co.kr/services/case-representation/): 노동위원회·노동청 사건 (부당해고, 임금체불)
-- [직장 내 괴롭힘 조사·대응](https://hrjs.co.kr/services/workplace-harassment/): 외부 조사위원, 판단·조치 자문
-- [HR컨설팅](https://hrjs.co.kr/services/hr-consulting/): 임금체계·평가제도 설계
-- [위험성평가 등 산업안전 컨설팅](https://hrjs.co.kr/services/risk-assessment/)
-- [산업재해 보상 전문 센터](https://hrjs.co.kr/services/sanjae-center/): 산재 신청·불승인 이의절차 대리 (근로자 대상)
-- [교육 · 출강](https://hrjs.co.kr/services/education/): 법정의무교육, 관리자 노무 교육 (전국)
+- [산업안전·중대재해](https://jeonseung.co.kr/services/industrial-safety/): 중대재해처벌법 안전보건관리체계 구축·이행
+- [인사·노무 자문](https://jeonseung.co.kr/services/hr-advisory/): 기업 월 자문, 취업규칙·근로계약 정비
+- [급여 아웃소싱](https://jeonseung.co.kr/services/payroll/): 급여 계산, 4대보험, 임금명세서
+- [사건 대리](https://jeonseung.co.kr/services/case-representation/): 노동위원회·노동청 사건 (부당해고, 임금체불)
+- [직장 내 괴롭힘 조사·대응](https://jeonseung.co.kr/services/workplace-harassment/): 외부 조사위원, 판단·조치 자문
+- [HR컨설팅](https://jeonseung.co.kr/services/hr-consulting/): 임금체계·평가제도 설계
+- [위험성평가 등 산업안전 컨설팅](https://jeonseung.co.kr/services/risk-assessment/)
+- [산업재해 보상 전문 센터](https://jeonseung.co.kr/services/sanjae-center/): 산재 신청·불승인 이의절차 대리 (근로자 대상)
+- [교육 · 출강](https://jeonseung.co.kr/services/education/): 법정의무교육, 관리자 노무 교육 (전국)
 
 ## 주요 페이지
-- [구성원](https://hrjs.co.kr/members/): 전지나 대표 공인노무사 프로필
+- [구성원](https://jeonseung.co.kr/members/): 전지나 대표 공인노무사 프로필
 
 Commercial-use: allowed
 Research-use: allowed

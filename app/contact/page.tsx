@@ -65,7 +65,7 @@ export default function ContactPage() {
               <input
                 type="hidden"
                 name="_next"
-                value="https://wlsk0213.github.io/jeonseung-web/contact/thanks/"
+                value="https://jeonseung.co.kr/contact/thanks/"
               />
               <input type="text" name="_honey" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
 
