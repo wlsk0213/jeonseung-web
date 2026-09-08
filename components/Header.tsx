@@ -43,11 +43,13 @@ export default function Header() {
               </div>
             </div>
             <div className="dd">
-              <Link href="/#insights">인사이트</Link>
+              <Link href="/insights/">인사이트</Link>
               <div className="sub">
-                <Link href="/#insights">인사·노무 자문</Link>
-                <Link href="/#insights">산업안전·중대재해</Link>
-                <Link href="/#insights">산업재해 보상</Link>
+                <Link href="/insights/">전체 보기</Link>
+                <Link href="/insights/#safety">산업안전·중대재해</Link>
+                <Link href="/insights/#sanjae">산재보상</Link>
+                <Link href="/insights/#harassment">직장 내 괴롭힘</Link>
+                <Link href="/insights/#hr">인사·노무 자문</Link>
               </div>
             </div>
             <div className="dd">

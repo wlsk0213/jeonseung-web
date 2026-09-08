@@ -3,6 +3,7 @@ import CtaBand from '@/components/CtaBand';
 import { services } from '@/lib/services';
 import { newsItems } from '@/lib/news';
 import { hrNewsItems } from '@/lib/hrnews';
+import { getAllInsights, fmtDate } from '@/lib/insights';
 
 const workDesc: Record<string, string> = {
   'industrial-safety': '중대재해처벌법이 요구하는 안전보건관리체계를 구축하고, 반기 점검까지 관리합니다.',
@@ -50,6 +51,7 @@ const faqJsonLd = {
 };
 
 export default function Home() {
+  const latestInsights = getAllInsights().slice(0, 3);
   return (
     <main>
       <script
@@ -196,22 +198,19 @@ export default function Home() {
             <p>실제 상담에서 가장 많이 받는 질문에, 근거 조문과 함께 답합니다.</p>
           </div>
           <div className="ins-grid">
-            <div className="ins">
-              <span className="cat">인사·노무 자문</span>
-              <h3>5인 미만 사업장도 해고 예고수당을 줘야 하나요?</h3>
-              <span className="date">2026. 08. · 전지나 노무사</span>
-            </div>
-            <div className="ins">
-              <span className="cat">산업안전·중대재해</span>
-              <h3>상시근로자 5인 사업장, 중대재해처벌법 적용될까? 판단 기준 정리</h3>
-              <span className="date">2026. 08. · 전지나 노무사</span>
-            </div>
-            <div className="ins">
-              <span className="cat">산업재해 보상</span>
-              <h3>산재 불승인 통지를 받았다면 — 90일 안에 해야 할 일</h3>
-              <span className="date">2026. 08. · 전지나 노무사</span>
-            </div>
+            {latestInsights.map((p) => (
+              <Link className="ins" href={`/insights/${p.slug}/`} key={p.slug}>
+                <span className="cat">{p.category}</span>
+                <h3>{p.title}</h3>
+                <span className="date">{fmtDate(p.date)} · 전지나 노무사</span>
+              </Link>
+            ))}
           </div>
+          <p style={{ textAlign: 'center', marginTop: 28 }}>
+            <Link href="/insights/" className="more-link">
+              인사이트 전체 보기 →
+            </Link>
+          </p>
         </div>
       </section>
 
