@@ -50,6 +50,7 @@ export default function Header() {
                 <Link href="/insights/#sanjae">산재보상</Link>
                 <Link href="/insights/#harassment">직장 내 괴롭힘</Link>
                 <Link href="/insights/#hr">인사·노무 자문</Link>
+                <a href="https://blog.jinanomu.com/" target="_blank" rel="noopener" className="ext">전지나 노무사 블로그 ↗</a>
               </div>
             </div>
             <div className="dd">

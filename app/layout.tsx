@@ -55,6 +55,7 @@ const legalServiceJsonLd = {
       '인사노무 자문',
     ],
     memberOf: { '@type': 'Organization', name: '한국공인노무사회' },
+    sameAs: ['https://blog.jinanomu.com/', 'https://blog.naver.com/cplajjn'],
   },
   areaServed: ['천안시', '아산시', '충청남도', '대한민국'],
   knowsAbout: [

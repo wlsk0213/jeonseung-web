@@ -176,6 +176,12 @@ footer .brand{font-family:"Noto Serif KR",serif;font-size:17px;color:var(--silve
 footer .brand-rep{font-size:13.5px;color:var(--silver-500);margin-left:6px;font-family:Pretendard,"Noto Sans KR",sans-serif}
 footer .official{max-width:560px;line-height:1.8}
 footer .nap{text-align:right;line-height:2}
+footer .channels{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px 18px}
+footer .channels a{color:var(--silver-300);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.25)}
+footer .channels a:hover{color:#fff}
+.dd .sub a.ext{color:var(--navy-600);font-weight:700}
+.profile .bio-links{margin-top:10px;font-size:14px}
+.profile .bio-links a{color:var(--navy-600);font-weight:700}
 footer .nap b{color:var(--silver-300);font-weight:500}
 
 /* service detail */

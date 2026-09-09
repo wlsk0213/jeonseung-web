@@ -20,6 +20,7 @@ const personJsonLd = {
   workLocation: { '@type': 'Place', address: '충남 천안시 동남구 청수9로 1, 7층 703호' },
   knowsAbout: ['산업안전', '중대재해처벌법', '산업재해 보상', '직장 내 괴롭힘 조사', '인사노무 자문'],
   memberOf: { '@type': 'Organization', name: '한국공인노무사회' },
+  sameAs: ['https://blog.jinanomu.com/', 'https://blog.naver.com/cplajjn'],
 };
 
 export default function MembersPage() {

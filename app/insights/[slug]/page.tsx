@@ -155,6 +155,8 @@ export default async function InsightPost({
             <p>{AUTHOR_C}</p>
             <p style={{ marginTop: 8 }}>
               <Link href="/members/">프로필·이력 보기 →</Link>
+              {' · '}
+              <a href="https://blog.jinanomu.com/" target="_blank" rel="noopener">전지나 노무사 블로그 ↗</a>
             </p>
           </div>
           <p className="post-note">

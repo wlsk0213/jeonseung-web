@@ -171,6 +171,9 @@ export default function Home() {
               안심노무사다. 노동위원회 국선노무사를 역임했고, 충청남도의회·코레일테크·한국가스기술공사
               등 공공기관의 조사관·심의위원으로 위촉되어 활동하고 있다.
             </p>
+            <p className="bio-links">
+              <a href="https://blog.jinanomu.com/" target="_blank" rel="noopener">전지나 노무사 블로그 ↗</a>
+            </p>
             <ul className="cred">
               <li><b>(현)</b> 노무법인 전승 대표노무사</li>
               <li><b>(현)</b> 충청남도 갑질 및 괴롭힘 예방 안심노무사</li>

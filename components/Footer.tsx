@@ -9,6 +9,11 @@ export default function Footer() {
             충남 천안의 노무법인으로, 산업안전·중대재해, 산재보상, 직장 내 괴롭힘 분야를 전문으로
             합니다.
           </p>
+          <p className="channels">
+            <a href="https://blog.jinanomu.com/" target="_blank" rel="noopener">전지나 노무사 블로그 ↗</a>
+            <a href="https://blog.naver.com/cplajjn" target="_blank" rel="noopener">네이버 블로그 ↗</a>
+            <a href="http://pf.kakao.com/_AxmxdJn" target="_blank" rel="noopener">카카오톡 채널 ↗</a>
+          </p>
         </div>
         <div className="nap">
           <b>충남 천안시 동남구 청수9로 1, 7층 703호</b> (청당동, 청오법조빌딩)
