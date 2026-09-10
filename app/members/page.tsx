@@ -85,7 +85,7 @@ export default function MembersPage() {
                         )}
                         {m.careerNow && m.careerNow.length > 0 && (
                           <div className="member-block">
-                            <h4>경력 (현)</h4>
+                            <h4>경력</h4>
                             <ul>
                               {m.careerNow.map((c) => (
                                 <li key={c}>{c}</li>
@@ -95,7 +95,7 @@ export default function MembersPage() {
                         )}
                         {m.careerPast && m.careerPast.length > 0 && (
                           <div className="member-block">
-                            <h4>경력 (전)</h4>
+                            <h4>경력 (前)</h4>
                             <ul>
                               {m.careerPast.map((c) => (
                                 <li key={c}>{c}</li>
