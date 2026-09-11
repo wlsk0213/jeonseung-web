@@ -331,3 +331,18 @@ footer .nap b{color:var(--silver-300);font-weight:500}
 .post-card p{font-size:14px;color:var(--silver-600);line-height:1.65}
 .post-card .date{font-size:12.5px;color:var(--silver-500);margin-top:10px;display:block}
 @media(max-width:640px){.post-body table{display:block;overflow-x:auto}}
+
+/* 언론 보도 */
+.press-wrap{max-width:860px}
+.press-intro{font-size:15px;color:var(--silver-600);line-height:1.8;margin-bottom:28px}
+.press-year h2{font-family:"Noto Serif KR",serif;font-size:22px;color:var(--navy-900);margin:26px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--navy-800)}
+.press-list{list-style:none;padding:0;margin:0}
+.press-item{padding:18px 0;border-bottom:1px solid var(--silver-300)}
+.press-meta{display:flex;gap:10px;align-items:center;font-size:13px;color:var(--silver-600);margin-bottom:6px}
+.press-outlet{font-weight:700;color:var(--navy-600);background:var(--silver-100);border-radius:4px;padding:2px 8px}
+.press-item h3{font-size:17px;font-weight:700;line-height:1.5;margin:0 0 6px}
+.press-item h3 a{color:var(--navy-900)}
+.press-item h3 a:hover{color:var(--navy-600)}
+.press-topic{font-size:14px;color:var(--ink);margin:0 0 8px}
+.press-quote{margin:8px 0;padding:10px 14px;border-left:3px solid var(--navy-600);background:var(--silver-100);font-size:14px;line-height:1.7;color:var(--ink)}
+.press-role{font-size:12.5px;color:var(--silver-600);margin:4px 0 0}

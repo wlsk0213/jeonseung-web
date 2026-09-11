@@ -57,6 +57,7 @@ export default function Header() {
               <Link href="/news/">법인 소식</Link>
               <div className="sub">
                 <Link href="/news/">소식 전체 보기</Link>
+                <Link href="/press/">언론 보도</Link>
                 <Link href="/news/">세미나·교육 안내</Link>
               </div>
             </div>

@@ -21,6 +21,13 @@ const personJsonLd = {
   knowsAbout: ['산업안전', '중대재해처벌법', '산업재해 보상', '직장 내 괴롭힘 조사', '인사노무 자문'],
   memberOf: { '@type': 'Organization', name: '한국공인노무사회' },
   sameAs: ['https://blog.jinanomu.com/', 'https://blog.naver.com/cplajjn'],
+  subjectOf: [
+    { '@type': 'NewsArticle', headline: '생거진천문화재단, 직장 내 괴롭힘·성희롱 예방교육 실시', datePublished: '2026-09-09', publisher: { '@type': 'Organization', name: '충청일보' }, url: 'https://www.ccdailynews.com/news/articleView.html?idxno=2439591' },
+    { '@type': 'NewsArticle', headline: "생거진천 문화재단 '2026년 직장 내 괴롭힘·성희롱 예방 교육' 실시", datePublished: '2026-09-09', publisher: { '@type': 'Organization', name: '금강일보' }, url: 'https://www.ggilbo.com/news/articleView.html?idxno=1180626' },
+    { '@type': 'NewsArticle', headline: '충남도, 청년 창업·창직 성과공유회 개최…60팀 맞춤형 지원', datePublished: '2025-12-04', publisher: { '@type': 'Organization', name: '뉴스1' }, url: 'https://n.news.naver.com/mnews/article/421/0008643723' },
+    { '@type': 'NewsArticle', headline: "청렴한 충남 '안심노무사'와 함께 만든다", datePublished: '2025-06-27', publisher: { '@type': 'Organization', name: '충청일보' }, url: 'https://www.ccdailynews.com/news/articleView.html?idxno=2351812' },
+    { '@type': 'CollectionPage', name: '언론 보도 — 전지나 노무사 · 노무법인 전승', url: 'https://jeonseung.co.kr/press/' },
+  ],
 };
 
 export default function MembersPage() {
