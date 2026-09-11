@@ -16,6 +16,22 @@ export interface Faq {
   q: string;
   a: string;
 }
+export interface ProofItem {
+  value: string;
+  label: string;
+  desc?: string;
+}
+export interface Proof {
+  title: string;
+  lead?: string;
+  items: ProofItem[];
+  tags?: string[];
+}
+export interface Related {
+  title: string;
+  href: string;
+  ext?: boolean;
+}
 export interface Service {
   slug: string;
   mark: string;
@@ -30,6 +46,10 @@ export interface Service {
   steps: Step[];
   flow: FlowCard[];
   faqs: Faq[];
+  serviceType?: string;
+  areaServed?: string[];
+  proof?: Proof;
+  related?: Related[];
 }
 
 export const services: Service[] = [
@@ -228,9 +248,25 @@ export const services: Service[] = [
     slug: 'workplace-harassment',
     mark: 'ⓔ',
     title: '직장 내 괴롭힘 조사 및 대응',
+    titleNote: '대전·충남·세종',
     navLabel: '괴롭힘 조사·대응',
     heroSub:
-      '신고가 접수된 순간부터 회사에는 법적 의무가 시작됩니다. 충청남도 갑질·괴롭힘 예방 안심노무사로 활동하는 대표 노무사가 외부 조사위원으로서 공정한 조사를 수행합니다.',
+      '신고가 접수된 순간부터 회사에는 법적 의무가 시작됩니다. 충청남도 갑질·괴롭힘 예방 안심노무사로 활동하는 대표 노무사가 외부 조사위원으로서 공정한 조사를 수행합니다. 천안 본사에서 대전·충남·세종 지역의 공공기관·지자체·공기업·기업 외부 조사를 맡고 있습니다.',
+    serviceType: '직장 내 괴롭힘 외부 조사',
+    areaServed: ['충청남도', '천안시', '아산시', '대전광역시', '세종특별자치시'],
+    proof: {
+      title: '외부 조사 경험',
+      lead: '공공기관·지자체·공기업·기업의 직장 내 괴롭힘 사건을 외부 전문가로서 다뤄 왔습니다.',
+      items: [
+        { value: '50건 이상', label: '직장 내 괴롭힘 외부 조사·상담·심의', desc: '공공기관, 지자체, 공기업, 기업 사건 (상담·심의 포함)' },
+        { value: '2025년~', label: '충청남도 갑질·괴롭힘 예방 안심노무사', desc: '충청남도의회 갑질 상담 조사관 활동 병행' },
+        { value: '대전·충남·세종', label: '조사 지역', desc: '천안 본사 기준 · 천안·아산 등 충남 전역, 대전, 세종' },
+      ],
+      tags: ['공공기관', '지자체', '공기업', '기업 외부 조사', '직장 내 성희롱 조사'],
+    },
+    related: [
+      { title: '직장 내 괴롭힘 익명 신고, 회사의 조사 의무와 초기 대응', href: 'https://blog.jinanomu.com/harassment-anonymous-report-company-response/', ext: true },
+    ],
     whyTitle: '왜 외부 조사가 필요한가',
     scopeTitle: '수행 업무',
     why: [
@@ -258,6 +294,18 @@ export const services: Service[] = [
       {
         q: '면담 내용의 비밀은 보장되나요?',
         a: '네. 조사 과정에서 알게 된 내용은 법령상 비밀유지 의무에 따라 관리되며, 보고서도 필요 최소 범위로 공유되도록 설계합니다. 신고를 이유로 한 불리한 처우는 법으로 금지되어 있음을 전 과정에서 안내합니다.',
+      },
+      {
+        q: '대전·충남·세종 지역도 외부 조사를 맡길 수 있나요?',
+        a: '네. 노무법인 전승은 충남 천안 본사에서 천안·아산 등 충남 전역과 대전, 세종 지역의 직장 내 괴롭힘 외부 조사를 수행합니다. 2025년부터 충청남도 갑질·괴롭힘 예방 안심노무사와 충청남도의회 갑질 상담 조사관으로 활동하는 전지나 대표노무사가 조사를 맡습니다.',
+      },
+      {
+        q: '공공기관·지자체·공기업 조사도 하나요?',
+        a: '네. 지금까지 공공기관, 지자체, 공기업, 기업의 직장 내 괴롭힘 외부 조사·상담·심의 50건 이상에 참여했습니다. 기관의 내부 규정과 처리 절차에 맞춰 조사 계획을 세웁니다.',
+      },
+      {
+        q: '직장 내 성희롱 신고도 외부 조사를 맡길 수 있나요?',
+        a: '네. 직장 내 성희롱은 남녀고용평등법에 따라 회사가 지체 없이 조사해야 합니다. 괴롭힘 조사와 같은 방식으로 신고인·행위자·참고인 면담과 조사보고서 작성까지 외부 조사를 수행합니다.',
       },
       {
         q: '회사가 아니라 피해 근로자인데 도움받을 수 있나요?',

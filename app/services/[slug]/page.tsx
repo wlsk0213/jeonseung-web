@@ -41,12 +41,61 @@ export default async function ServicePage({
     })),
   };
 
+  const serviceJsonLd = svc.areaServed
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: svc.title,
+        serviceType: svc.serviceType || svc.title,
+        description: svc.heroSub,
+        url: `https://jeonseung.co.kr/services/${svc.slug}/`,
+        areaServed: svc.areaServed.map((a) => ({ '@type': 'AdministrativeArea', name: a })),
+        provider: {
+          '@type': 'LegalService',
+          name: '노무법인 전승',
+          url: 'https://jeonseung.co.kr/',
+          telephone: '+82-41-417-1915',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '청수9로 1, 7층 703호',
+            addressLocality: '천안시 동남구',
+            addressRegion: '충청남도',
+            postalCode: '31198',
+            addressCountry: 'KR',
+          },
+          employee: {
+            '@type': 'Person',
+            name: '전지나',
+            jobTitle: '대표 공인노무사',
+            url: 'https://jeonseung.co.kr/members/',
+            hasCredential: ['충청남도 갑질·괴롭힘 예방 안심노무사', '충청남도의회 갑질 상담 조사관'],
+          },
+        },
+        ...(svc.proof
+          ? {
+              additionalProperty: svc.proof.items.map((it) => ({
+                '@type': 'PropertyValue',
+                name: it.label,
+                value: it.value,
+                description: it.desc,
+              })),
+            }
+          : {}),
+      }
+    : null;
+
   return (
     <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
+      {serviceJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+        />
+      )}
       <div className="phero">
         <div className="wrap">
           <div className="crumb">
@@ -60,6 +109,34 @@ export default async function ServicePage({
           <p className="sub">{svc.heroSub}</p>
         </div>
       </div>
+
+      {svc.proof && (
+        <section className="proof">
+          <div className="wrap">
+            <div className="sec-head left">
+              <div className="eyebrow">TRACK RECORD</div>
+              <h2 className="serif">{svc.proof.title}</h2>
+              {svc.proof.lead && <p>{svc.proof.lead}</p>}
+            </div>
+            <div className="proof-grid">
+              {svc.proof.items.map((it) => (
+                <div className="proof-card" key={it.label}>
+                  <div className="v">{it.value}</div>
+                  <div className="l">{it.label}</div>
+                  {it.desc && <p>{it.desc}</p>}
+                </div>
+              ))}
+            </div>
+            {svc.proof.tags && (
+              <div className="proof-tags">
+                {svc.proof.tags.map((t) => (
+                  <span key={t}>{t}</span>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       <section className="why">
         <div className="wrap">
@@ -121,6 +198,30 @@ export default async function ServicePage({
           </div>
         </div>
       </section>
+
+      {svc.related && svc.related.length > 0 && (
+        <section style={{ paddingTop: 0 }}>
+          <div className="wrap">
+            <div className="sec-head left">
+              <div className="eyebrow">READ MORE</div>
+              <h2 className="serif">관련 글</h2>
+            </div>
+            <ul className="related-list">
+              {svc.related.map((r) => (
+                <li key={r.href}>
+                  {r.ext ? (
+                    <a href={r.href} target="_blank" rel="noopener">
+                      {r.title} <span aria-hidden="true">↗</span>
+                    </a>
+                  ) : (
+                    <Link href={r.href}>{r.title}</Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       <section className="faqsec">
         <div className="wrap">
