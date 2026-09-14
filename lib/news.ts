@@ -1,20 +1,67 @@
 export interface NewsItem {
+  slug: string; // 건별 페이지 주소 /news/<slug>/
   badge: '협약' | '교육' | '활동' | '안내' | '수상' | '채용' | '위촉' | '선정';
   title: string;
-  date: string; // YYYY.MM.DD 또는 YYYY.MM
-  body: string;
+  date: string; // YYYY.MM.DD 또는 YYYY.MM (화면 표시용)
+  body: string; // 목록·요약용 2~4문장
+  content?: string[]; // 건별 페이지 본문 문단(없으면 body 사용)
   url?: string; // 원문(블로그 등) 링크
+  source?: string; // 원문 매체 표기
+  related?: { label: string; href: string }[]; // 관련 업무·페이지
+  image?: string; // 대표 이미지(썸네일, 1200x630) — /news/<slug>/thumb.png
+  imageSq?: string; // 목록용 정사각(600x600) — /news/<slug>/thumb-sq.png
+  attachments?: { src: string; alt: string; caption?: string }[]; // 위촉장 등 첨부 사진
+}
+
+/** 'YYYY.MM.DD' | 'YYYY.MM' | 'YYYY' → ISO 날짜 문자열 (YYYY-MM-DD, 일자 없으면 01일) */
+export function newsIso(d: string): string {
+  const parts = d.split('.').map((x) => x.trim()).filter(Boolean);
+  const [y, m = '01', day = '01'] = parts;
+  return `${y}-${m.padStart(2, '0')}-${day.padStart(2, '0')}`;
+}
+export function getNews(slug: string): NewsItem | undefined {
+  return newsItems.find((n) => n.slug === slug);
 }
 
 // 새 소식은 이 배열 맨 앞에 추가하면 됩니다.
 export const newsItems: NewsItem[] = [
   {
+    slug: 'chungnam-fire-academy-grievance-committee-2026',
+    badge: '위촉',
+    title: '전지나 대표 노무사, 충청남도 충청소방학교 소방공무원 고충심사위원회 민간위원 위촉',
+    date: '2026.06',
+    body: '노무법인 전승의 전지나 대표 공인노무사가 충청남도 충청소방학교 소방공무원 고충심사위원회 민간위원으로 위촉되었다(임기 2026. 6. 15.~2028. 6. 14., 2년). 소방공무원 고충심사위원회는 소방공무원법에 따라 소방기관에 설치되는 심의기구로, 보수·근무시간·휴가 등 근무조건과 승진·전보 등 인사, 성희롱·차별 등 신상 문제에 관한 고충을 심사한다. 전승이 기업·공공기관에서 다루어 온 직장 내 괴롭힘·부당 처우·인사상 불이익 판단 경험을 공직 현장의 고충 처리에 보태게 된다.',
+    content: [
+      '노무법인 전승의 전지나 대표 공인노무사가 충청남도 충청소방학교 소방공무원 고충심사위원회 민간위원으로 위촉되었다. 임기는 2026년 6월 15일부터 2028년 6월 14일까지 2년이다.',
+      '소방공무원 고충심사위원회는 소방공무원법에 따라 지방소방학교 등 소방기관에 설치되는 심의기구다. 보수·근무시간·휴가 같은 근무조건, 승진·전보 등 인사관리, 성희롱이나 차별 대우 같은 신상 문제까지 심사 대상에 들어간다. 징계처럼 뚜렷한 불이익 처분만이 아니라 부당한 처우와 개인적 어려움까지 살펴 해결 방향을 찾는다는 점에서, 공직 내부의 고충을 공정하게 다루는 통로 역할을 한다.',
+      '고충심사는 직장 내 괴롭힘, 부당한 처우, 인사상 불이익을 어떤 기준으로 판단하고 조정할 것인가라는 점에서 인사노무 분쟁의 핵심과 맞닿아 있다. 노무법인 전승은 기업과 공공기관의 직장 내 괴롭힘 외부 조사, 징계·고충 심의 참여, 인사 자문을 통해 같은 사안을 사실관계와 법령 기준에 따라 정리하는 일을 해 왔다. 전지나 노무사는 이번 위촉으로 그 경험을 공직 현장의 고충 처리에 보태게 된다.',
+      '전지나 노무사는 충청남도 갑질·괴롭힘 예방 안심노무사, 충청남도의회 갑질 상담 조사관, 코레일테크(주) 고충심의위원·징계심의위원 등 공공 부문의 고충·징계 심의에 참여하고 있다.',
+    ],
+    url: 'https://blog.naver.com/jshr1915/224321049166',
+    source: '노무법인 전승 네이버 블로그(2026. 6. 19.)',
+    image: '/news/chungnam-fire-academy-grievance-committee-2026/thumb.png',
+    imageSq: '/news/chungnam-fire-academy-grievance-committee-2026/thumb-sq.png',
+    attachments: [
+      {
+        src: '/news/chungnam-fire-academy-grievance-committee-2026/certificate.jpg',
+        alt: '충청남도충청소방학교 소방공무원 고충심사위원회 민간위원 위촉장 (전지나, 임기 2026. 6. 15.~2028. 6. 14.)',
+        caption: '충청남도충청소방학교 위촉장 (2026. 6. 15.)',
+      },
+    ],
+    related: [
+      { label: '직장 내 괴롭힘 조사·대응', href: '/services/workplace-harassment/' },
+      { label: '전지나 대표 노무사 프로필', href: '/members/' },
+    ],
+  },
+  {
+    slug: 'new-homepage-2026',
     badge: '안내',
     title: '노무법인 전승 새 홈페이지를 오픈했습니다',
     date: '2026.08',
     body: '노무법인 전승의 새 홈페이지가 문을 열었습니다. 업무분야별 상세 안내와 구성원 소개, 상담 신청 기능을 제공하며, 앞으로 법인 소식과 노동법 인사이트를 꾸준히 전해드리겠습니다.',
   },
   {
+    slug: 'chungnam-artist-legal-counselor-2026',
     badge: '위촉',
     title: '전지나 대표 노무사, 충남문화관광재단 「2026년 예술인 복지사업」 법률 전문상담자 위촉',
     date: '2026.05',
@@ -22,18 +69,21 @@ export const newsItems: NewsItem[] = [
     url: 'https://blog.naver.com/cplajjn/224291532043',
   },
   {
+    slug: 'kosha-consulting-4th-year-2026',
     badge: '선정',
     title: '노무법인 전승, 4년 연속 고용노동부 안전보건관리체계 구축 컨설팅 수행기관 선정',
     date: '2026',
     body: '노무법인 전승이 고용노동부·안전보건공단의 안전보건관리체계 구축 컨설팅 수행기관으로 4년 연속 선정되었다. 중대재해처벌법이 요구하는 안전보건관리체계 구축·이행을 사업장 현장에서 지원해 온 전문성을 공식적으로 인정받은 결과로, 전승은 올해에도 중소사업장의 안전보건 체계 구축을 밀착 지원한다.',
   },
   {
+    slug: 'kosha-consulting-grade-a-2025',
     badge: '수상',
     title: '노무법인 전승, 안전보건관리체계 구축 컨설팅 수행기관 평가 「A등급」 획득',
     date: '2025.12',
     body: '노무법인 전승이 산업안전보건공단의 안전보건관리체계 구축 컨설팅 수행기관 평가에서 최고 등급인 A등급을 받았다. 이번 평가는 컨설팅의 품질, 사업장 이행 지원 성과, 전문 인력 운영 등을 종합적으로 심사한 결과로, 전승이 수년간 중소사업장 현장에서 수행해 온 안전보건관리체계 구축 컨설팅의 전문성을 공식적으로 인정받은 것이다. 노무법인 전승은 ISO45001 심사원·산업안전기사 등 자격을 갖춘 전문 인력을 바탕으로 중대재해처벌법 대응 체계 구축, 위험성평가 등 산업안전·중대재해 분야 컨설팅을 수행하고 있으며, 이번 A등급 평가를 계기로 산업재해 예방을 위한 현장 밀착 지원을 한층 강화할 계획이다.',
   },
   {
+    slug: 'chungnam-council-gapjil-investigator-2025',
     badge: '위촉',
     title: '전지나 대표 노무사, 충남도의회 갑질 피해 신고·지원센터 상담조사관 위촉',
     date: '2025.09',
@@ -41,6 +91,7 @@ export const newsItems: NewsItem[] = [
     url: 'https://blog.naver.com/cplajjn/223996547483',
   },
   {
+    slug: 'chungnam-ansim-nomusa-2025',
     badge: '위촉',
     title: '전지나 대표 노무사, 충청남도 「안심 노무사」 위촉',
     date: '2025.06',

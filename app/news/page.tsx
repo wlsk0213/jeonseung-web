@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import CtaBand from '@/components/CtaBand';
+import Link from 'next/link';
 import { newsItems } from '@/lib/news';
 
 export const metadata: Metadata = {
@@ -25,26 +26,39 @@ export default function NewsPage() {
               <p className="board-empty">등록된 소식이 없습니다.</p>
             ) : (
               newsItems.map((n, i) => (
-                <details className="board-item" key={`${n.date}-${n.title}`} open={i === 0}>
+                <details className="board-item" key={n.slug} open={i === 0}>
                   <summary>
                     <span className="badge">{n.badge}</span>
                     <span className="bt">{n.title}</span>
                     <span className="bd">{n.date}</span>
                   </summary>
-                  <div className="board-body">
+                  <div className={`board-body${n.imageSq || n.image ? ' has-thumb' : ''}`}>
+                    {(n.imageSq || n.image) && (
+                      <Link href={`/news/${n.slug}/`} className="news-thumb">
+                        <img src={n.imageSq ?? n.image} alt={n.title} loading="lazy" />
+                      </Link>
+                    )}
+                    <div className="board-text">
                     <p>{n.body}</p>
-                    {n.url && (
-                      <p style={{ paddingTop: 8 }}>
+                    <p style={{ paddingTop: 8, display: 'flex', gap: 18, flexWrap: 'wrap' }}>
+                      <Link
+                        href={`/news/${n.slug}/`}
+                        style={{ color: 'var(--navy-600)', fontWeight: 700, fontSize: 14 }}
+                      >
+                        자세히 보기 →
+                      </Link>
+                      {n.url && (
                         <a
                           href={n.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          style={{ color: 'var(--navy-600)', fontWeight: 700, fontSize: 14 }}
+                          style={{ color: 'var(--silver-500)', fontWeight: 600, fontSize: 13.5 }}
                         >
-                          원문 보기 →
+                          원문 ↗
                         </a>
-                      </p>
-                    )}
+                      )}
+                    </p>
+                    </div>
                   </div>
                 </details>
               ))

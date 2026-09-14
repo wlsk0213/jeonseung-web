@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { services } from '@/lib/services';
 import { getAllInsights } from '@/lib/insights';
+import { newsItems, newsIso } from '@/lib/news';
 
 export const dynamic = 'force-static';
 
@@ -10,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/`, priority: 1 },
     { url: `${base}/members/`, priority: 0.8 },
     { url: `${base}/news/`, priority: 0.6 },
+    ...newsItems.map((n) => ({ url: `${base}/news/${n.slug}/`, lastModified: newsIso(n.date), priority: 0.6 })),
     { url: `${base}/press/`, priority: 0.7 },
     { url: `${base}/hrnews/`, priority: 0.6 },
     { url: `${base}/contact/`, priority: 0.7 },

@@ -236,7 +236,7 @@ export default function Home() {
               </h3>
               <div className="news-list">
                 {newsItems.slice(0, 4).map((n) => (
-                  <Link className="news-row" href="/news/" key={n.title}>
+                  <Link className="news-row" href={`/news/${n.slug}/`} key={n.slug}>
                     <span className="badge">{n.badge}</span>
                     <span className="t">{n.title}</span>
                     <span className="d">{n.date}</span>
