@@ -101,12 +101,12 @@ export default function Home() {
       <div className="stats">
         <div className="wrap">
           <div><div className="n">4,000건+</div><div className="l">총 상담·사건 위임<small>네이버 엑스퍼트 상품 2,749 · 컨설팅 1,000+ · 사건 수임 500+</small></div></div>
-          <div><div className="n">4.9<span>/5.0</span></div><div className="l">상담 만족도<small>네이버 엑스퍼트 후기 기준</small></div></div>
+          <div><div className="n">4.9<span>/5.0</span></div><div className="l">상담 만족도<small>네이버 엑스퍼트 후기 834개 기준</small></div></div>
           <div><div className="n">A등급</div><div className="l">안전보건관리체계 구축 컨설팅 수행기관 평가<small>산업안전보건공단 · 4년 연속 수행</small></div></div>
           <div><div className="n">20명</div><div className="l">노무법인 소속 전문가<small>천안 본사 · 서울 · 경기</small></div></div>
         </div>
         <p className="stats-sub">
-          자문 기업 300개 이상 · 누적 사건·컨설팅 500건 이상 ·{' '}
+          자문 기업 300개 이상 · 누적 사건·컨설팅 500건 이상 · 네이버 엑스퍼트 상담 상품 2,749회 판매 · 후기 834개 · 평점 4.9/5.0 ·{' '}
           <a href="https://m.expert.naver.com/expert/profile/home?storeId=100000347" target="_blank" rel="noopener">네이버 엑스퍼트 프로필 ↗</a>{' '}
           · 2026년 9월 기준
         </p>
