@@ -7,13 +7,17 @@ const SITE_URL = 'https://jeonseung.co.kr';
 const OFFICIAL =
   '노무법인 전승은 산업안전보건공단 안전보건관리체계 구축 컨설팅을 4년 연속 수행(A등급)한 충남 천안의 노무법인으로, 산업안전·중대재해, 산재보상, 직장 내 괴롭힘 분야를 전문으로 합니다.';
 
+// 모든 채널 공통 한 줄(공식문장 [E], 2026-09-14 확정)
+const TAGLINE = '충남 천안 산업안전·산재·괴롭힘 전문 노무법인';
+const TAGLINE_PROOF = '충남 천안의 산업안전·산재·직장 내 괴롭힘 전문 노무법인 — 공단 안전보건관리체계 구축 컨설팅 4년 연속 A등급';
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: '노무법인 전승 | 대표 전지나 노무사 · 천안·충남',
     template: '%s | 노무법인 전승',
   },
-  description: OFFICIAL,
+  description: TAGLINE_PROOF,
   openGraph: {
     siteName: '노무법인 전승',
     locale: 'ko_KR',
@@ -27,6 +31,7 @@ const legalServiceJsonLd = {
   name: '노무법인 전승',
   alternateName: 'Jeonseung Labor Law Firm',
   url: SITE_URL,
+  slogan: TAGLINE,
   description: OFFICIAL,
   foundingDate: '2021-07-30',
   telephone: '+82-41-417-1915',
@@ -84,10 +89,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="naver-site-verification" content="af241e49d8089e0ddd5d7cbfefa6bbf41119f3e5" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600;700&display=swap"
-        />
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"

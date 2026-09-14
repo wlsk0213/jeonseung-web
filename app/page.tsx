@@ -60,21 +60,21 @@ export default function Home() {
       />
       <div className="hero">
         <div className="wrap">
-          <div className="eyebrow">천안 · 충남 중부권에서, 전국으로</div>
-          <h1 className="serif">
+          <span className="eyebrow"><i></i>충남 천안·대전권 산업안전·산재·괴롭힘 전문 노무법인</span>
+          <h1>
             일터에 문제가 생긴 순간,
             <br />
             <strong>가장 먼저 믿고 찾는 노무법인 전승</strong>
           </h1>
-          <p className="rep">
-            대표 <b>전지나 공인노무사</b> · 충청남도 갑질·괴롭힘 예방 안심노무사
-          </p>
           <p className="lede">
-            노무법인 전승은 충남 천안에 본사를 둔 노무법인으로, 대표 전지나 노무사(충청남도
-            갑질·괴롭힘 예방 안심노무사)가 산업안전·중대재해, 산재보상, 직장 내 괴롭힘 조사·대응을
-            전문으로 합니다. 산업안전보건공단 안전보건관리체계 구축 컨설팅을 4년 연속
-            수행(A등급)했습니다.
+            노무법인 전승은 산업안전보건공단 안전보건관리체계 구축 컨설팅을 4년 연속 수행(A등급)한 충남
+            천안의 노무법인으로, 산업안전·중대재해, 산재보상, 직장 내 괴롭힘 분야를 전문으로 합니다.
           </p>
+          <div className="badges">
+            <span className="badge t">공단 안전보건관리체계 구축 컨설팅 4년 연속 A등급</span>
+            <span className="badge">충청남도 갑질·괴롭힘 예방 안심노무사</span>
+            <span className="badge">직장 내 괴롭힘 외부 조사·심의 50건+</span>
+          </div>
           <div className="cta-row">
             <Link href="/contact/" className="btn-solid">
               상담 문의하기
@@ -83,51 +83,61 @@ export default function Home() {
               업무분야 보기
             </a>
           </div>
+          <div className="chan">
+            <span className="who">
+              <img src="/jeon-jina.jpg" alt="전지나 대표 공인노무사" width={28} height={28} />
+              대표 전지나 노무사 채널
+            </span>
+            <a href="https://blog.jinanomu.com/" target="_blank" rel="noopener"><span className="ic b">B</span>개인 블로그</a>
+            <a href="https://blog.naver.com/cplajjn" target="_blank" rel="noopener"><span className="ic n">N</span>네이버 블로그</a>
+            <a href="http://pf.kakao.com/_AxmxdJn" target="_blank" rel="noopener"><span className="ic k">K</span>카카오톡 상담</a>
+            <a href="https://map.naver.com/p/search/%EB%85%B8%EB%AC%B4%EB%B2%95%EC%9D%B8%20%EC%A0%84%EC%8A%B9%20%EC%B2%9C%EC%95%88" target="_blank" rel="noopener"><span className="ic p">P</span>네이버 플레이스</a>
+            <Link href="/press/"><span className="ic pr">뉴</span>언론 보도 13건</Link>
+            <a href="https://g.page/r/CXpdPSZ6A4y9EBM/review" target="_blank" rel="noopener"><span className="ic g">G</span>구글 리뷰</a>
+          </div>
         </div>
+      </div>
+
+      <div className="stats">
+        <div className="wrap">
+          <div><div className="n">4,000건+</div><div className="l">총 상담·사건 위임<small>네이버 엑스퍼트 상품 2,749 · 컨설팅 1,000+ · 사건 수임 500+</small></div></div>
+          <div><div className="n">4.9<span>/5.0</span></div><div className="l">상담 만족도<small>네이버 엑스퍼트 후기 기준</small></div></div>
+          <div><div className="n">A등급</div><div className="l">안전보건관리체계 구축 컨설팅 수행기관 평가<small>산업안전보건공단 · 4년 연속 수행</small></div></div>
+          <div><div className="n">20명</div><div className="l">노무법인 소속 전문가<small>천안 본사 · 서울 · 경기</small></div></div>
+        </div>
+        <p className="stats-sub">
+          자문 기업 300개 이상 · 누적 사건·컨설팅 500건 이상 ·{' '}
+          <a href="https://m.expert.naver.com/expert/profile/home?storeId=100000347" target="_blank" rel="noopener">네이버 엑스퍼트 프로필 ↗</a>{' '}
+          · 2026년 9월 기준
+        </p>
       </div>
 
       <div className="core">
         <div className="wrap">
+          <div className="sec-h">CORE PRACTICE</div>
+          <div className="sec-t">세 가지에 집중합니다</div>
           <div className="core-grid">
             <Link className="core-card" href="/services/industrial-safety/">
-              <div className="no">BUSINESS 01</div>
-              <h3>산업안전·중대재해</h3>
-              <p>산업안전보건공단 안전보건관리체계 구축 컨설팅 4년 연속 수행(A등급). 공공기관 위험성평가 컨설팅 경험으로 실무 수준의 예방 체계를 만듭니다.</p>
+              <span className="pill">산업안전·중대재해</span>
+              <h3>예방 체계부터 사고 이후 대응까지, 한 팀이 맡습니다</h3>
+              <p>중대재해처벌법 안전보건관리체계 구축·이행, 위험성평가, 원청 안전보건 평가 대응으로 사고를 막고, 중대재해가 발생하면 고용노동부 감독·수사 대응, 작업중지 해제 신청, 재발 방지 대책까지 사업주 곁에서 수행합니다.</p>
+              <div className="k"><span>안전보건관리체계</span><span>감독·수사 대응</span><span>작업중지 해제</span></div>
               <span className="go">자세히 보기 →</span>
             </Link>
             <Link className="core-card" href="/services/sanjae-center/">
-              <div className="no">BUSINESS 02</div>
-              <h3>산재보상</h3>
-              <p>산재 신청부터 불승인 이의신청, 유족급여까지. 전담 본부팀이 재해 근로자의 편에서 절차를 대리합니다.</p>
+              <span className="pill t">산재보상</span>
+              <h3>산재는 입증 싸움입니다, 전담 노무사가 준비합니다</h3>
+              <p>재해경위서, 근무시간 재구성, 의학적 소견 정리까지. 뇌심혈관·근골격계·직업성 암·정신질환처럼 입증이 어려운 사건일수록 산재 전담 노무사의 준비가 결과를 좌우합니다. 신청부터 불승인 심사청구, 유족급여까지 대리합니다.</p>
+              <div className="k"><span>재해경위서</span><span>불승인 대응</span><span>유족급여</span></div>
               <span className="go">자세히 보기 →</span>
             </Link>
             <Link className="core-card" href="/services/workplace-harassment/">
-              <div className="no">BUSINESS 03</div>
-              <h3>직장 내 괴롭힘 조사·대응</h3>
-              <p>충청남도 갑질·괴롭힘 예방 안심노무사인 대표 노무사가 외부 조사위원으로서 공정한 조사와 조치·예방을 수행합니다.</p>
+              <span className="pill p">직장 내 괴롭힘 조사·대응</span>
+              <h3>신고가 들어온 순간부터, 조사·조치·예방을 함께합니다</h3>
+              <p>충남·대전·세종 공공기관·지자체·기업의 외부 조사위원으로 조사 계획, 당사자·참고인 면담, 조사보고서, 징계·보호조치 자문, 예방 교육까지 수행합니다. 회사 안에서 풀기 어려운 사건일수록 외부 전문가가 필요합니다.</p>
+              <div className="k"><span>외부 조사위원</span><span>조사보고서</span><span>예방교육</span></div>
               <span className="go">자세히 보기 →</span>
             </Link>
-          </div>
-        </div>
-      </div>
-
-      <div className="trust">
-        <div className="wrap">
-          <div>
-            <div className="num">2021</div>
-            <div className="lbl">법인 설립</div>
-          </div>
-          <div>
-            <div className="num">300+</div>
-            <div className="lbl">자문 기업</div>
-          </div>
-          <div>
-            <div className="num">500+</div>
-            <div className="lbl">누적 처리 사건</div>
-          </div>
-          <div>
-            <div className="num">20</div>
-            <div className="lbl">전문 구성원</div>
           </div>
         </div>
       </div>
@@ -269,7 +279,16 @@ export default function Home() {
         </div>
       </section>
 
-      <CtaBand />
+      <CtaBand
+        title={
+          <>
+            혼자 고민하던 문제,
+            <br />
+            오늘 전화 한 통으로 해결하세요.
+          </>
+        }
+        sub="어디에 무엇을 물어야 할지 몰라도 괜찮습니다. 첫 상담에서 지금 할 수 있는 일과 준비할 것을 알려드립니다."
+      />
     </main>
   );
 }
