@@ -118,21 +118,21 @@ export default function Home() {
           <div className="sec-t">세 가지에 집중합니다</div>
           <div className="core-grid">
             <Link className="core-card" href="/services/industrial-safety/">
-              <span className="pill">산업안전·중대재해</span>
+              <span className="ch"><span className="ic" dangerouslySetInnerHTML={{ __html: "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.6\" strokeLinecap=\"round\" strokeLinejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3l7 3v5c0 4.6-3 8.4-7 10-4-1.6-7-5.4-7-10V6l7-3z\"/><path d=\"M9 12l2 2 4-4\"/></svg>" }} /><span className="lb">산업안전·중대재해</span></span>
               <h3>예방 체계부터 사고 이후 대응까지, 한 팀이 맡습니다</h3>
               <p>중대재해처벌법 안전보건관리체계 구축·이행, 위험성평가, 원청 안전보건 평가 대응으로 사고를 막고, 중대재해가 발생하면 고용노동부 감독·수사 대응, 작업중지 해제 신청, 재발 방지 대책까지 사업주 곁에서 수행합니다.</p>
               <div className="k"><span>안전보건관리체계</span><span>감독·수사 대응</span><span>작업중지 해제</span></div>
               <span className="go">자세히 보기 →</span>
             </Link>
             <Link className="core-card" href="/services/sanjae-center/">
-              <span className="pill t">산재보상</span>
+              <span className="ch"><span className="ic" dangerouslySetInnerHTML={{ __html: "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.6\" strokeLinecap=\"round\" strokeLinejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 3h7l4 4v14H7z\"/><path d=\"M14 3v4h4\"/><path d=\"M10 13h6M10 17h6M10 9h2\"/></svg>" }} /><span className="lb">산재보상</span></span>
               <h3>산재는 입증 싸움입니다, 전담 노무사가 준비합니다</h3>
               <p>재해경위서, 근무시간 재구성, 의학적 소견 정리까지. 뇌심혈관·근골격계·직업성 암·정신질환처럼 입증이 어려운 사건일수록 산재 전담 노무사의 준비가 결과를 좌우합니다. 신청부터 불승인 심사청구, 유족급여까지 대리합니다.</p>
               <div className="k"><span>재해경위서</span><span>불승인 대응</span><span>유족급여</span></div>
               <span className="go">자세히 보기 →</span>
             </Link>
             <Link className="core-card" href="/services/workplace-harassment/">
-              <span className="pill p">직장 내 괴롭힘 조사·대응</span>
+              <span className="ch"><span className="ic" dangerouslySetInnerHTML={{ __html: "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"1.6\" strokeLinecap=\"round\" strokeLinejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 4v16\"/><path d=\"M5 8h14\"/><path d=\"M8 20h8\"/><path d=\"M5 8l-3 6a3 3 0 006 0L5 8zM19 8l-3 6a3 3 0 006 0l-3-6z\"/></svg>" }} /><span className="lb">직장 내 괴롭힘 조사·대응</span></span>
               <h3>신고가 들어온 순간부터, 조사·조치·예방을 함께합니다</h3>
               <p>충남·대전·세종 공공기관·지자체·기업의 외부 조사위원으로 조사 계획, 당사자·참고인 면담, 조사보고서, 징계·보호조치 자문, 예방 교육까지 수행합니다. 회사 안에서 풀기 어려운 사건일수록 외부 전문가가 필요합니다.</p>
               <div className="k"><span>외부 조사위원</span><span>조사보고서</span><span>예방교육</span></div>

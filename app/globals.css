@@ -411,3 +411,25 @@ footer .nap b{color:var(--silver-300);font-weight:500}
 .board-item .news-thumb img{display:block;width:100%;height:100%;object-fit:cover}
 @media (max-width:640px){.board-item .news-thumb{width:96px;height:96px}}
 /* /news v2 */
+
+/* core v3 */
+.core{background:#f3f5f9;background-image:linear-gradient(rgba(13,26,72,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(13,26,72,.035) 1px,transparent 1px);background-size:44px 44px;padding:60px 0 28px}
+.core .sec-h{font-size:12.5px;letter-spacing:.22em;color:var(--navy-600);font-weight:700;margin-bottom:8px}
+.core .sec-t{font-size:27px;font-weight:800;color:var(--navy-900);margin-bottom:24px;letter-spacing:-.02em}
+.core-grid{gap:18px}
+.core-card{background:#fff;border:1px solid #dfe4ee;border-radius:12px;padding:28px 28px 24px;box-shadow:0 1px 0 rgba(13,26,72,.04);display:flex;flex-direction:column;transition:border-color .18s,box-shadow .18s,transform .18s;position:relative}
+.core-card:before{content:"";position:absolute;left:28px;right:28px;top:0;height:2px;background:linear-gradient(90deg,var(--navy-800),var(--navy-500));border-radius:0 0 2px 2px;opacity:0;transition:opacity .18s}
+.core-card:hover{border-color:#b9c3dc;box-shadow:0 12px 32px rgba(13,26,72,.10);transform:translateY(-2px)}
+.core-card:hover:before{opacity:1}
+.core-card .ch{display:flex;align-items:center;gap:12px;align-self:stretch;padding-bottom:16px;border-bottom:1px solid var(--silver-200)}
+.core-card .ic{flex:none;width:42px;height:42px;border-radius:10px;background:var(--navy-900);color:#fff;display:inline-flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.core-card .ic svg{width:22px;height:22px}
+.core-card .lb{font-size:13px;font-weight:700;color:var(--navy-700);letter-spacing:.02em}
+.core-card h3{font-size:19.5px;font-weight:800;color:var(--navy-900);margin:18px 0 10px;line-height:1.42;letter-spacing:-.015em;text-wrap:balance}
+.core-card p{font-size:14.5px;line-height:1.75;color:var(--silver-600);flex:1}
+.core-card .k{font-size:12.5px;color:var(--navy-700);margin-top:16px;display:flex;gap:6px 8px;flex-wrap:wrap}
+.core-card .k span{background:transparent;border:1px solid #cfd7e6;border-radius:4px;padding:3px 9px;font-weight:600;letter-spacing:.01em}
+.core-card .go{margin-top:18px;font-size:13.5px;font-weight:700;color:var(--navy-800);display:inline-flex;align-items:center;gap:6px}
+.core-card:hover .go{text-decoration:underline;text-underline-offset:4px}
+@media (max-width:960px){.core-card{padding:22px 20px 20px}.core-card .ic{width:38px;height:38px}}
+/* /core v3 */
