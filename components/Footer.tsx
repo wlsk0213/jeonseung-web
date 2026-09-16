@@ -5,9 +5,7 @@ export default function Footer() {
         <div>
           <div className="brand">노무법인 전승 <span className="brand-rep">대표 전지나 노무사</span></div>
           <p className="official">
-            노무법인 전승은 산업안전보건공단 안전보건관리체계 구축 컨설팅을 4년 연속 수행(A등급)한
-            충남 천안의 노무법인으로, 산업안전·중대재해, 산재보상, 직장 내 괴롭힘 분야를 전문으로
-            합니다.
+            노무법인 전승은 산업안전·중대재해, 산재보상, 직장 내 괴롭힘 조사, 노동사건, HR컨설팅, 인사노무 자문, 급여 아웃소싱, 건설노무의 분야별 전문센터에서 공인노무사·산업안전기사 등 전문가가 의뢰인의 문제 해결을 맡는 노무법인 전문가 그룹입니다. 산업안전보건공단 안전보건관리체계 구축 컨설팅을 4년 연속 수행(A등급)했으며, 충남 천안 본사와 서울·경기 지사를 두고 있습니다.
           </p>
           <p className="channels">
             <a href="https://blog.jinanomu.com/" target="_blank" rel="noopener">전지나 노무사 블로그 ↗</a>

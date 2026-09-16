@@ -60,15 +60,16 @@ export default function Home() {
       />
       <div className="hero">
         <div className="wrap">
-          <span className="eyebrow"><i></i>충남 천안·대전권 산업안전·산재·괴롭힘 전문 노무법인</span>
+          <span className="eyebrow"><i></i>산업안전·중대재해·산재보상·괴롭힘 전문 노무법인 · 천안 본사 · 서울지사 · 경기지사</span>
           <h1>
             일터에 문제가 생긴 순간,
             <br />
             <strong>가장 먼저 믿고 찾는 노무법인 전승</strong>
           </h1>
           <p className="lede">
-            노무법인 전승은 산업안전보건공단 안전보건관리체계 구축 컨설팅을 4년 연속 수행(A등급)한 충남
-            천안의 노무법인으로, 산업안전·중대재해, 산재보상, 직장 내 괴롭힘 분야를 전문으로 합니다.
+            노무법인 전승은 산업안전·중대재해, 산재보상, 직장 내 괴롭힘 조사를 비롯한 분야별 전문센터에서 공인노무사·산업안전기사 등 전문가가 의뢰인의 문제 해결을 맡는 노무법인 전문가 그룹입니다.
+            <br className="pc" />
+            천안 본사와 서울·경기 등 전국적으로 지사를 두고 있으며, 산업안전보건공단 안전보건관리체계 구축 컨설팅을 4년 연속 수행(A등급)했습니다.
           </p>
           <div className="badges">
             <span className="badge t">공단 안전보건관리체계 구축 컨설팅 4년 연속 A등급</span>

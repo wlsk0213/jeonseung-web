@@ -309,6 +309,7 @@ footer .nap b{color:var(--silver-300);font-weight:500}
   .step ul{grid-template-columns:1fr}
   footer .wrap{grid-template-columns:1fr}
   footer .nap{text-align:left}
+  br.pc{display:none}
 }
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
