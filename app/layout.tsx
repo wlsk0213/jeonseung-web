@@ -14,7 +14,7 @@ const TAGLINE_PROOF = '산업안전·산재보상·직장 내 괴롭힘 전문 �
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: '노무법인 전승 | 대표 전지나 노무사 · 천안·충남',
+    default: '노무법인 전승 · 전지나 노무사 | 산업안전·산재보상·직장 내 괴롭힘 전문 노무법인',
     template: '%s | 노무법인 전승',
   },
   description: TAGLINE_PROOF,
