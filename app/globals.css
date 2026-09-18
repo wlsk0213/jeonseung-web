@@ -269,6 +269,16 @@ footer .nap b{color:var(--silver-300);font-weight:500}
 .board-item .board-body{padding:0 22px 20px;border-top:1px solid var(--silver-200)}
 .board-item .board-body p{font-size:14.5px;color:var(--silver-600);padding-top:14px}
 .board-empty{text-align:center;color:var(--silver-500);font-size:14.5px;padding:30px 0}
+.board-item .att{margin-top:16px;padding:14px 16px;background:var(--silver-100);border:1px solid var(--silver-300);border-radius:6px}
+.board-item .att-h{font-size:12.5px;font-weight:700;letter-spacing:.04em;color:var(--navy-700);margin-bottom:8px}
+.board-item .att ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:7px}
+.board-item .att li{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline;font-size:14px;line-height:1.5}
+.board-item .att-k{flex:none;font-size:11px;font-weight:700;color:var(--navy-700);background:var(--navy-100);border-radius:4px;padding:2px 7px}
+.board-item .att a{color:var(--navy-700);font-weight:600;text-decoration:none;border-bottom:1px solid var(--silver-400)}
+.board-item .att a:hover{border-bottom-color:var(--navy-600)}
+.board-item .att a.att-f{font-size:12.5px;font-weight:600;color:var(--silver-600);border-bottom:none;white-space:nowrap}
+.board-item .att a.att-f:before{content:"↓ "}
+.board-item .att a.att-f:hover{color:var(--navy-700)}
 
 /* contact form */
 .contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:36px;align-items:start}

@@ -36,6 +36,31 @@ export default function HrNewsPage() {
                   </summary>
                   <div className="board-body">
                     <p>{n.body}</p>
+                    {n.attachments && n.attachments.length > 0 && (
+                      <div className="att">
+                        <div className="att-h">관련 자료</div>
+                        <ul>
+                          {n.attachments.map((a) => (
+                            <li key={a.url + a.label}>
+                              <span className="att-k">{a.kind}</span>
+                              <a href={a.url} target="_blank" rel="noopener noreferrer">
+                                {a.label}
+                              </a>
+                              {a.fileUrl && (
+                                <a
+                                  className="att-f"
+                                  href={a.fileUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  {a.fileType ?? '파일'} 내려받기
+                                </a>
+                              )}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                     {n.source && (
                       <p style={{ paddingTop: 8, fontSize: 13, color: 'var(--silver-500)' }}>
                         출처:{' '}

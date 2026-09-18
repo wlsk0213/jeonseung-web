@@ -1,9 +1,19 @@
+// 첨부: 법령 원문·지침·매뉴얼·보도자료·판결문 등 근거 자료. 정부·공공기관 원문만 사용합니다.
+export interface HrAttachment {
+  kind: '법령' | '시행령' | '시행규칙' | '지침' | '매뉴얼' | '보도자료' | '판결문' | '서식';
+  label: string; // 자료 제목(발표일 포함 권장)
+  url: string; // 원문 게시글·법령 화면 주소
+  fileUrl?: string; // 파일 직접 내려받기 주소가 있을 때만
+  fileType?: 'PDF' | 'HWP' | 'HWPX' | 'ZIP';
+}
+
 export interface HrNewsItem {
   badge: '법령' | '행정' | '판례' | '안전';
   title: string;
   date: string; // YYYY.MM
   body: string;
   source?: { label: string; url: string }; // 정부·공공기관 출처만 사용
+  attachments?: HrAttachment[]; // 근거 자료(법령·지침·판결문 등)
 }
 
 // 새 뉴스는 이 배열 맨 앞에 추가하면 됩니다.
@@ -20,9 +30,24 @@ export const hrNewsItems: HrNewsItem[] = [
   },
   {
     badge: '법령',
-    title: '2026년 8월부터 달라지는 모성보호 제도 — 난임치료휴가 유급 확대, 육아휴직 주 단위 분할',
+    title: '2026년 8월부터 달라지는 모성보호 제도 — 육아휴직 주 단위 분할, 난임치료휴가 유급 4일(11월 27일)',
     date: '2026.08',
-    body: '근로기준법·남녀고용평등법 개정으로 2026년 8월부터 2027년 6월까지 모성보호·일가정 양립 제도가 순차 시행됩니다. 난임치료휴가의 유급 기간이 연 2일에서 4일로 확대되고(연 6일 중 유급 4일), 초등학교 2학년 이하 자녀의 휴원·휴교·방학·질병 등의 사유가 있는 경우 육아휴직을 1주 또는 2주 단위로 분할 사용할 수 있게 됩니다(연 1회). 사업장 규모와 무관하게 적용되므로 취업규칙과 인사 실무 정비가 필요합니다. 적용 방법이 궁금하시면 전승에 문의해 주세요.',
+    body: '근로기준법·남녀고용평등법 개정으로 2026년 8월부터 2027년 6월까지 모성보호·일가정 양립 제도가 순차 시행됩니다. 2026년 8월부터는 초등학교 2학년 이하 자녀의 휴원·휴교·방학·질병 등의 사유가 있는 경우 육아휴직을 1주 또는 2주 단위로 분할 사용할 수 있습니다(연 1회). 난임치료휴가는 연 6일 가운데 유급 기간이 2일에서 4일로 늘고 급여 상한이 16만 8천원에서 33만 6천원으로 오르는데, 이 부분의 시행일은 2026년 11월 27일입니다. 사업장 규모와 무관하게 적용되므로 취업규칙의 휴가 규정과 급여 실무를 시행일에 맞춰 정비해 두시기 바랍니다.',
+    attachments: [
+      {
+        kind: '보도자료',
+        label: '난임치료휴가, 11월부터 유급기간 4일로 확대(2026. 8. 23.)',
+        url: 'https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19813',
+      },
+      {
+        kind: '매뉴얼',
+        label: '사업주와 인사담당자를 위한 난임치료휴가 및 급여제도 활용가이드',
+        url: 'https://www.moel.go.kr/policy/policydata/view.do?bbs_seq=20260800716',
+        fileUrl:
+          'https://www.moel.go.kr/common/downloadFile.do?file_seq=20260801571&bbs_seq=20260800716&bbs_id=29&file_ext=pdf',
+        fileType: 'PDF',
+      },
+    ],
   },
   {
     badge: '안전',
@@ -33,6 +58,16 @@ export const hrNewsItems: HrNewsItem[] = [
       label: '고용노동부 정책자료',
       url: 'https://www.moel.go.kr/policy/policydata/view.do?bbs_seq=20260700329',
     },
+    attachments: [
+      {
+        kind: '지침',
+        label: '중대재해처벌법 중대산업재해 질의회시집(2026. 6.)',
+        url: 'https://www.moel.go.kr/policy/policydata/view.do?bbs_seq=20260700329',
+        fileUrl:
+          'https://www.moel.go.kr/common/downloadFile.do?file_seq=20260700505&bbs_seq=20260700329&bbs_id=29&file_ext=pdf',
+        fileType: 'PDF',
+      },
+    ],
   },
   {
     badge: '행정',
