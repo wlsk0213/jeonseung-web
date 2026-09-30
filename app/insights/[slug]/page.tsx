@@ -6,7 +6,7 @@ import { getAllInsights, getInsight, categoryId, fmtDate } from '@/lib/insights'
 
 const SITE = 'https://jeonseung.co.kr';
 const AUTHOR_C =
-  '전지나 노무사는 충남 천안에서 산업안전·중대재해, 산재보상, 직장 내 괴롭힘 분야를 중심으로 활동하는 공인노무사로, 노무법인 전승의 대표이며 충청남도 갑질·괴롭힘 예방 안심노무사다.';
+  '전지나 노무사는 산업안전·중대재해, 산재보상, 직장 내 괴롭힘 분야를 중심으로 활동하는 공인노무사로, 노무법인 전승의 대표이며 충청남도 갑질·괴롭힘 예방 안심노무사다.';
 
 export function generateStaticParams() {
   return getAllInsights().map((p) => ({ slug: p.slug }));
