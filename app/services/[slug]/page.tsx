@@ -199,6 +199,46 @@ export default async function ServicePage({
         </div>
       </section>
 
+      {svc.regions && (
+        <section style={{ paddingTop: 0 }}>
+          <div className="wrap">
+            <div className="sec-head left">
+              <div className="eyebrow">OFFICES</div>
+              <h2 className="serif">{svc.regions.title}</h2>
+              {svc.regions.note && <p>{svc.regions.note}</p>}
+            </div>
+            <div className="region-wrap">
+              <table className="region-table">
+                <thead>
+                  <tr>
+                    <th>사무소</th>
+                    <th>대응 지역</th>
+                    <th>관할 노동관서</th>
+                    <th>주소 · 연락처</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {svc.regions.rows.map((r) => (
+                    <tr key={r.office}>
+                      <td>
+                        <b>{r.office}</b>
+                      </td>
+                      <td>{r.area}</td>
+                      <td>{r.agency}</td>
+                      <td>
+                        {r.address}
+                        <br />
+                        <a href={`tel:${r.tel}`}>{r.tel}</a>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      )}
+
       {svc.related && svc.related.length > 0 && (
         <section style={{ paddingTop: 0 }}>
           <div className="wrap">
