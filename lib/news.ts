@@ -38,7 +38,7 @@ export const newsItems: NewsItem[] = [
       '당진은 철강과 에너지, 물류 산업이 모여 있는 지역으로, 산업전환 과정에서 생기는 고용과 안전 문제가 지역 노사 모두의 과제다. 전지나 노무사는 산업안전·중대재해 대응과 산재보상, 직장 내 괴롭힘 조사, 인사·노무 자문을 중심으로 사업장을 지원해 왔으며, 충청남도 갑질 예방 안심노무사와 충청소방학교 고충심사위원회 민간위원 등으로도 활동하고 있다.',
     ],
     url: 'https://www.joongdo.co.kr/web/view.php?key=20260930010008979',
-    source: '중도일보 (당진시 제1차 노사민정 본협의회 개최 보도)',
+    source: '중도일보 (당진시 제1차 노사민정 본협의회 개최 보도) · 당진신문 10-01 「50인 미만 사업장 안전 지원 확대..당진 노사민정, 공동선언문 채택」(위원 명단에 전지나·노무법인 전승 표기, https://www.idjnews.kr/news/articleView.html?idxno=303014)',
     image: '/news/dangjin-labor-management-council-2026/thumb.png',
     imageSq: '/news/dangjin-labor-management-council-2026/thumb-sq.png',
     attachments: [

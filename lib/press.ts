@@ -15,6 +15,19 @@ export interface PressItem {
 
 export const pressItems: PressItem[] = [
   {
+    outlet: "당진신문",
+    headline: "50인 미만 사업장 안전 지원 확대..당진 노사민정, 공동선언문 채택",
+    date: "2026-10-01",
+    url: "https://www.idjnews.kr/news/articleView.html?idxno=303014",
+    topic: "당진시 노사민정협의회 2026년 제1차 본협의회(9.29, 당진시청 해나루홀) — 재적 22명 중 17명 참석, 안건 5건 가결·공동선언문 채택, 위원 명단에 전지나(노무법인 전승 노무사)",
+    quote: "전지나(노무법인 전승 노무사)",
+    role: "노무법인 전승 노무사 (본협의회 민간위원 명단)",
+    mentions: [
+      "전지나",
+      "노무법인 전승"
+    ]
+  },
+  {
     outlet: "금강일보",
     headline: "생거진천 문화재단 '2026년 직장 내 괴롭힘·성희롱 예방 교육' 실시",
     date: "2026-09-09",
