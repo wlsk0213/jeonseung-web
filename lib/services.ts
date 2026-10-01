@@ -50,6 +50,7 @@ export interface Service {
   title: string;
   titleNote?: string;
   navLabel: string;
+  homeLabel?: string; // 홈 업무분야 카드 제목(없으면 navLabel)
   heroSub: string;
   whyTitle: string;
   scopeTitle: string;
@@ -213,9 +214,10 @@ export const services: Service[] = [
   {
     slug: 'case-representation',
     mark: 'ⓓ',
-    title: '사건 대리',
+    title: '부당징계·부당해고·임금체불 등 사건 대리',
     titleNote: '노동위원회 · 노동청 등',
     navLabel: '사건 대리',
+    homeLabel: '부당해고·임금체불 사건 대리',
     heroSub:
       '부당해고 구제신청부터 노동청 진정·고소 대응까지. 서면과 입증이 결과를 가르는 절차에서, 공인노무사가 대리인으로 함께합니다.',
     whyTitle: '왜 대리인이 필요한가',

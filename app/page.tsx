@@ -9,7 +9,7 @@ const workDesc: Record<string, string> = {
   'industrial-safety': '중대재해처벌법이 요구하는 안전보건관리체계를 구축하고, 반기 점검까지 관리합니다.',
   'hr-advisory': '월 자문으로 취업규칙·임금·근로시간 등 기업의 노무 리스크를 상시 관리합니다.',
   payroll: '급여 계산부터 4대보험·임금명세서 발급까지 원스톱으로 대행합니다.',
-  'case-representation': '부당해고·임금체불 등 노동위원회·노동청 사건을 대리합니다.',
+  'case-representation': '부당해고·부당징계 구제신청, 임금체불 진정·고소 등 노동위원회·노동청 사건을 대리합니다.',
   'workplace-harassment': '외부 조사위원의 공정한 조사와 판단·조치·예방까지 지원합니다.',
   'hr-consulting': '임금체계·평가제도 등 인사제도를 조직 성장 단계에 맞게 설계합니다.',
   'risk-assessment': '법정 요건을 갖춘 현장 실사 기반 위험성평가 체계를 만듭니다.',
@@ -155,7 +155,7 @@ export default function Home() {
             {services.map((s) => (
               <Link key={s.slug} className="work-item" href={`/services/${s.slug}/`}>
                 <div className="work-top">
-                  {s.navLabel}
+                  {s.homeLabel ?? s.navLabel}
                   <span className="arrow">→</span>
                 </div>
                 <p className="work-desc">{workDesc[s.slug]}</p>
