@@ -4,7 +4,6 @@ import { services } from '@/lib/services';
 import { newsItems } from '@/lib/news';
 import { hrNewsItems } from '@/lib/hrnews';
 import { getAllInsights, fmtDate } from '@/lib/insights';
-import { pressItems } from '@/lib/press';
 
 const workDesc: Record<string, string> = {
   'industrial-safety': '중대재해처벌법이 요구하는 안전보건관리체계를 구축하고, 반기 점검까지 관리합니다.',
@@ -96,7 +95,6 @@ export default function Home() {
             <a href="https://blog.naver.com/cplajjn" target="_blank" rel="noopener"><span className="ic n">N</span>네이버 블로그</a>
             <a href="http://pf.kakao.com/_AxmxdJn" target="_blank" rel="noopener"><span className="ic k">K</span>카카오톡 상담</a>
             <a href="https://map.naver.com/p/search/%EB%85%B8%EB%AC%B4%EB%B2%95%EC%9D%B8%20%EC%A0%84%EC%8A%B9%20%EC%B2%9C%EC%95%88" target="_blank" rel="noopener"><span className="ic p">P</span>네이버 플레이스</a>
-            <Link href="/press/"><span className="ic pr">뉴</span>언론 보도 {pressItems.length}건</Link>
             <a href="https://g.page/r/CXpdPSZ6A4y9EBM/review" target="_blank" rel="noopener"><span className="ic g">G</span>구글 리뷰</a>
           </div>
         </div>
