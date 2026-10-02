@@ -60,7 +60,7 @@ const legalServiceJsonLd = {
       '인사노무 자문',
     ],
     memberOf: { '@type': 'Organization', name: '한국공인노무사회' },
-    sameAs: ['https://jinanomu.com/', 'https://blog.jinanomu.com/', 'https://sanjae.jinanomu.com/', 'https://blog.naver.com/cplajjn', 'https://blog.naver.com/jslaborlaw', 'https://blog.naver.com/jshr1915', 'https://m.expert.naver.com/expert/profile/home?storeId=100000347', 'http://pf.kakao.com/_AxmxdJn', 'https://g.page/r/CXpdPSZ6A4y9EBM', 'https://www.lawsee.com/expert/cplajjn', 'https://connect.rememberapp.co.kr/profile/382233'],
+    sameAs: ['https://jinanomu.com/', 'https://blog.jinanomu.com/', 'https://sanjae.jinanomu.com/', 'https://blog.naver.com/cplajjn', 'https://blog.naver.com/jslaborlaw', 'https://blog.naver.com/jshr1915', 'https://m.expert.naver.com/expert/profile/home?storeId=100000347', 'http://pf.kakao.com/_AxmxdJn', 'https://g.page/r/CXpdPSZ6A4y9EBM', 'https://www.lawsee.com/expert/cplajjn', 'https://connect.rememberapp.co.kr/profile/382233', 'https://www.linkedin.com/in/%EC%A7%80%EB%82%98-%EC%A0%84-226639440/'],
     subjectOf: [
       { '@type': 'NewsArticle', headline: '생거진천문화재단, 직장 내 괴롭힘·성희롱 예방교육 실시', datePublished: '2026-09-09', publisher: { '@type': 'Organization', name: '충청일보' }, url: 'https://www.ccdailynews.com/news/articleView.html?idxno=2439591' },
       { '@type': 'NewsArticle', headline: "생거진천 문화재단 '2026년 직장 내 괴롭힘·성희롱 예방 교육' 실시", datePublished: '2026-09-09', publisher: { '@type': 'Organization', name: '금강일보' }, url: 'https://www.ggilbo.com/news/articleView.html?idxno=1180626' },
