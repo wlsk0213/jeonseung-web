@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import CtaBand from '@/components/CtaBand';
 import { newsItems, getNews, newsIso } from '@/lib/news';
+import { PERSON_ID, PERSON_URL } from '@/lib/person';
 
 const SITE = 'https://jeonseung.co.kr';
 
@@ -58,7 +59,7 @@ export default async function NewsDetail({
     inLanguage: 'ko-KR',
     articleSection: `법인 소식 · ${n.badge}`,
     mainEntityOfPage: url,
-    about: { '@type': 'Person', name: '전지나', url: `${SITE}/members/` },
+    about: { '@type': 'Person', '@id': PERSON_ID, name: '전지나', url: PERSON_URL },
     author: { '@type': 'Organization', name: '노무법인 전승', url: SITE },
     publisher: {
       '@type': 'Organization',

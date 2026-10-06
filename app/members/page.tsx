@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import CtaBand from '@/components/CtaBand';
 import { members, offices } from '@/lib/members';
+import { personFull } from '@/lib/person';
 
 export const metadata: Metadata = {
   title: '구성원',
@@ -10,17 +11,11 @@ export const metadata: Metadata = {
 
 const personJsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: '전지나',
-  alternateName: 'Jeon Jina',
-  jobTitle: '대표 공인노무사',
+  ...personFull,
   description:
     '전지나 노무사는 산업안전·중대재해, 산재보상, 직장 내 괴롭힘 분야를 중심으로 활동하는 공인노무사로, 노무법인 전승의 대표이며 충청남도 갑질·괴롭힘 예방 안심노무사다. 노무법인 전승은 천안 본사와 서울·경기 지사를 두고 있다.',
-  worksFor: { '@type': 'LegalService', name: '노무법인 전승', url: 'https://jeonseung.co.kr' },
+  mainEntityOfPage: 'https://jeonseung.co.kr/members/',
   workLocation: { '@type': 'Place', address: '충남 천안시 동남구 청수9로 1, 7층 703호' },
-  knowsAbout: ['산업안전', '중대재해처벌법', '산업재해 보상', '직장 내 괴롭힘 조사', '인사노무 자문'],
-  memberOf: { '@type': 'Organization', name: '한국공인노무사회' },
-  sameAs: ['https://blog.jinanomu.com/', 'https://blog.naver.com/cplajjn'],
   subjectOf: [
     { '@type': 'NewsArticle', headline: '생거진천문화재단, 직장 내 괴롭힘·성희롱 예방교육 실시', datePublished: '2026-09-09', publisher: { '@type': 'Organization', name: '충청일보' }, url: 'https://www.ccdailynews.com/news/articleView.html?idxno=2439591' },
     { '@type': 'NewsArticle', headline: "생거진천 문화재단 '2026년 직장 내 괴롭힘·성희롱 예방 교육' 실시", datePublished: '2026-09-09', publisher: { '@type': 'Organization', name: '금강일보' }, url: 'https://www.ggilbo.com/news/articleView.html?idxno=1180626' },

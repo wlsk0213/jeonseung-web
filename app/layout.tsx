@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { personFull } from '@/lib/person';
 
 const SITE_URL = 'https://jeonseung.co.kr';
 const OFFICIAL =
@@ -45,22 +46,7 @@ const legalServiceJsonLd = {
     postalCode: '31198',
   },
   founder: {
-    '@type': 'Person',
-    name: '전지나',
-    alternateName: 'Jeon Jina',
-    jobTitle: '대표 공인노무사',
-    url: `${SITE_URL}/members/`,
-    description:
-      '전지나 노무사는 산업안전·중대재해, 산재보상, 직장 내 괴롭힘 분야를 중심으로 활동하는 공인노무사로, 노무법인 전승의 대표이며 충청남도 갑질·괴롭힘 예방 안심노무사다.',
-    knowsAbout: [
-      '산업안전',
-      '중대재해처벌법',
-      '산업재해 보상',
-      '직장 내 괴롭힘 조사',
-      '인사노무 자문',
-    ],
-    memberOf: { '@type': 'Organization', name: '한국공인노무사회' },
-    sameAs: ['https://jinanomu.com/', 'https://blog.jinanomu.com/', 'https://sanjae.jinanomu.com/', 'https://blog.naver.com/cplajjn', 'https://blog.naver.com/jslaborlaw', 'https://blog.naver.com/jshr1915', 'https://m.expert.naver.com/expert/profile/home?storeId=100000347', 'http://pf.kakao.com/_AxmxdJn', 'https://g.page/r/CXpdPSZ6A4y9EBM', 'https://www.lawsee.com/expert/cplajjn', 'https://connect.rememberapp.co.kr/profile/382233', 'https://www.linkedin.com/in/%EC%A7%80%EB%82%98-%EC%A0%84-226639440/'],
+    ...personFull,
     subjectOf: [
       { '@type': 'NewsArticle', headline: '생거진천문화재단, 직장 내 괴롭힘·성희롱 예방교육 실시', datePublished: '2026-09-09', publisher: { '@type': 'Organization', name: '충청일보' }, url: 'https://www.ccdailynews.com/news/articleView.html?idxno=2439591' },
       { '@type': 'NewsArticle', headline: "생거진천 문화재단 '2026년 직장 내 괴롭힘·성희롱 예방 교육' 실시", datePublished: '2026-09-09', publisher: { '@type': 'Organization', name: '금강일보' }, url: 'https://www.ggilbo.com/news/articleView.html?idxno=1180626' },

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import CtaBand from '@/components/CtaBand';
 import { services, getService } from '@/lib/services';
+import { personBase } from '@/lib/person';
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -64,10 +65,7 @@ export default async function ServicePage({
             addressCountry: 'KR',
           },
           employee: {
-            '@type': 'Person',
-            name: '전지나',
-            jobTitle: '대표 공인노무사',
-            url: 'https://jeonseung.co.kr/members/',
+            ...personBase,
             hasCredential: ['충청남도 갑질·괴롭힘 예방 안심노무사', '충청남도의회 갑질 상담 조사관'],
           },
         },

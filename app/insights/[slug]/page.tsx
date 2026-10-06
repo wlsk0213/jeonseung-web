@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import CtaBand from '@/components/CtaBand';
 import { getAllInsights, getInsight, categoryId, fmtDate } from '@/lib/insights';
+import { personBase, PERSON_URL } from '@/lib/person';
 
 const SITE = 'https://jeonseung.co.kr';
 const AUTHOR_C =
@@ -30,7 +31,7 @@ export async function generateMetadata({
       description: post.description,
       publishedTime: post.date,
       modifiedTime: post.updated ?? post.date,
-      authors: [`${SITE}/members/`],
+      authors: [PERSON_URL],
     },
   };
 }
@@ -61,10 +62,7 @@ export default async function InsightPost({
     keywords: post.keywords.join(', '),
     mainEntityOfPage: url,
     author: {
-      '@type': 'Person',
-      name: '전지나',
-      jobTitle: '대표 공인노무사',
-      url: `${SITE}/members/`,
+      ...personBase,
       worksFor: { '@type': 'LegalService', name: '노무법인 전승', url: SITE },
     },
     publisher: {

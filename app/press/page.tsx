@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import CtaBand from '@/components/CtaBand';
 import { pressItems, pressYears, fmtPressDate } from '@/lib/press';
+import { personBase, PERSON_ID, PERSON_URL } from '@/lib/person';
 
 const SITE = 'https://jeonseung.co.kr';
 
@@ -22,7 +23,7 @@ export default function PressPage() {
     publisher: { '@type': 'Organization', name: p.outlet },
     about: p.mentions.map((m) =>
       m === '전지나'
-        ? { '@type': 'Person', name: '전지나', url: `${SITE}/members/` }
+        ? { '@type': 'Person', '@id': PERSON_ID, name: '전지나', url: PERSON_URL }
         : { '@type': 'LegalService', name: '노무법인 전승', url: SITE },
     ),
   }));
@@ -35,10 +36,7 @@ export default function PressPage() {
     inLanguage: 'ko-KR',
     about: [
       {
-        '@type': 'Person',
-        name: '전지나',
-        jobTitle: '대표 공인노무사',
-        url: `${SITE}/members/`,
+        ...personBase,
         worksFor: { '@type': 'LegalService', name: '노무법인 전승', url: SITE },
         subjectOf: articles.map((a) => ({ '@type': 'NewsArticle', headline: a.headline, url: a.url, datePublished: a.datePublished, publisher: a.publisher })),
       },
