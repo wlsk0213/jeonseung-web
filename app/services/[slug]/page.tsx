@@ -211,7 +211,7 @@ export default async function ServicePage({
                   <tr>
                     <th>사무소</th>
                     <th>대응 지역</th>
-                    <th>관할 노동관서</th>
+                    <th>{svc.regions.agencyLabel || '관할 노동관서'}</th>
                     <th>주소 · 연락처</th>
                   </tr>
                 </thead>
