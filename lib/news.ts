@@ -26,6 +26,26 @@ export function getNews(slug: string): NewsItem | undefined {
 // 새 소식은 이 배열 맨 앞에 추가하면 됩니다.
 export const newsItems: NewsItem[] = [
   {
+    slug: 'forest-service-public-institution-evaluation-2026',
+    badge: '위촉',
+    title: '전지나 대표 노무사, 산림청 기타 공공기관 경영평가위원 위촉',
+    date: '2026.02.28',
+    body: '노무법인 전승의 전지나 대표 공인노무사가 산림청 기타공공기관 경영평가위원회 위원으로 위촉되었다(위촉기간 2026. 2. 1.~2028. 1. 31., 산림청장 위촉). 이 위원회는 「산림청 소관 기타공공기관 경영평가에 관한 규정」에 따라 산림청 소관 기타공공기관의 경영평가를 위해 두는 위원회로, 전지나 노무사는 위원으로 평가에 참여한다.',
+    content: [
+      '노무법인 전승의 전지나 대표 공인노무사가 산림청 기타공공기관 경영평가위원회 위원으로 위촉되었다. 위촉장은 2026년 2월 28일 산림청장 명의로 수여되었으며, 위촉기간은 2026년 2월 1일부터 2028년 1월 31일까지다.',
+      '기타공공기관은 「공공기관의 운영에 관한 법률」에 따라 지정되는 공공기관 가운데 공기업·준정부기관이 아닌 기관을 말한다. 산림청 기타공공기관 경영평가위원회는 「산림청 소관 기타공공기관 경영평가에 관한 규정」에 따라 산림청 소관 기타공공기관의 경영평가를 위해 두는 위원회이며, 전지나 노무사는 위원으로서 평가에 참여한다.',
+      '전지나 노무사는 행정안전부 산하기관 경영평가 위원으로 활동한 바 있으며, 현재 한국가스기술공사 감사심의위원·고충심의위원, 코레일테크(주) 고충심의위원·징계심의위원, 국가수리과학연구소 인권경영위원 등으로 공공기관의 인사·노무 관련 위원회에 참여하고 있다.',
+      '노무법인 전승은 산업안전·중대재해, 산재보상, 직장 내 괴롭힘 조사와 함께 공공기관·지자체·기업의 인사노무 자문, 취업규칙·근로계약 정비, HR컨설팅을 수행하고 있다.',
+    ],
+    image: '/news/forest-service-public-institution-evaluation-2026/thumb.png',
+    imageSq: '/news/forest-service-public-institution-evaluation-2026/thumb-sq.png',
+    related: [
+      { label: 'HR컨설팅', href: '/services/hr-consulting/' },
+      { label: '인사·노무 자문', href: '/services/hr-advisory/' },
+      { label: '전지나 대표 노무사 프로필', href: '/members/' },
+    ],
+  },
+  {
     slug: 'mss-business-support-counselor-2026',
     badge: '위촉',
     title: '전지나 대표 노무사, 중소벤처기업부 비즈니스지원단 상담위원 재위촉',
