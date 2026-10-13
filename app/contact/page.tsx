@@ -56,7 +56,7 @@ export default function ContactPage() {
 
             <form
               className="cform"
-              action="https://formsubmit.co/jjn@hrjs.co.kr"
+              action="https://formsubmit.co/26e62d762e56ca7ac088cc7b443c573a"
               method="POST"
             >
               <input type="hidden" name="_subject" value="[홈페이지 상담신청] 새 문의가 접수되었습니다" />
