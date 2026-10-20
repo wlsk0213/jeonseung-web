@@ -5,7 +5,7 @@
 export const PERSON_ID = 'https://jinanomu.com/#person';
 export const PERSON_URL = 'https://jinanomu.com/';
 
-// 허브 channels 13곳(순서 동일) + 맨 앞에 허브 자신 URL
+// 허브 channels 14곳(순서 동일) + 맨 앞에 허브 자신 URL
 export const PERSON_SAME_AS = [
   PERSON_URL,
   'https://jeonseung.co.kr/',
@@ -14,6 +14,7 @@ export const PERSON_SAME_AS = [
   'https://blog.naver.com/cplajjn',
   'https://blog.naver.com/jslaborlaw',
   'https://blog.naver.com/jshr1915',
+  'https://www.threads.com/@jinanomu',
   'https://m.expert.naver.com/expert/profile/home?storeId=100000347',
   'http://pf.kakao.com/_AxmxdJn',
   'https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bjky&pkid=1&os=18815819&qvt=0&query=%EA%B3%B5%EC%9D%B8%EB%85%B8%EB%AC%B4%EC%82%AC%EC%A0%84%EC%A7%80%EB%82%98%20%ED%94%84%EB%A1%9C%ED%95%84',

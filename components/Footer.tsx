@@ -9,7 +9,9 @@ export default function Footer() {
           </p>
           <p className="channels">
             <a href="https://blog.jinanomu.com/" target="_blank" rel="noopener">전지나 노무사 블로그 ↗</a>
+            <a href="https://jinanomu.com/" target="_blank" rel="noopener">전지나 노무사 홈페이지 ↗</a>
             <a href="https://blog.naver.com/cplajjn" target="_blank" rel="noopener">네이버 블로그 ↗</a>
+            <a href="https://www.threads.com/@jinanomu" target="_blank" rel="noopener">스레드 ↗</a>
             <a href="http://pf.kakao.com/_AxmxdJn" target="_blank" rel="noopener">카카오톡 채널 ↗</a>
           </p>
         </div>

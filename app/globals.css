@@ -73,7 +73,7 @@ nav.menu > a:hover, nav.menu .dd:hover > a, nav.menu .dd:focus-within > a{color:
 .hero .chan a{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:7px 16px 7px 8px;transition:.15s}
 .hero .chan a:hover{background:#fff;color:var(--navy-900)}
 .hero .chan .ic{width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;line-height:1;flex:0 0 24px}
-.ic.b{background:#e9edf8;color:var(--navy-800)}.ic.n{background:#03c75a;color:#fff}.ic.k{background:#fee500;color:#191919}.ic.p{background:#9fe3cf;color:#0f3d33}.ic.g{background:#fff;color:#4285f4}.ic.pr{background:#f5e8ef;color:#8a2c55}
+.ic.b{background:#e9edf8;color:var(--navy-800)}.ic.n{background:#03c75a;color:#fff}.ic.k{background:#fee500;color:#191919}.ic.p{background:#9fe3cf;color:#0f3d33}.ic.g{background:#fff;color:#4285f4}.ic.pr{background:#f5e8ef;color:#8a2c55}.ic.t{background:#101010;color:#fff}
 
 /* core */
 .core{background:var(--silver-100);padding-bottom:72px}

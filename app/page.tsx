@@ -93,6 +93,7 @@ export default function Home() {
             <a href="https://jinanomu.com/" target="_blank" rel="noopener"><span className="ic b">J</span>개인 홈페이지</a>
             <a href="https://blog.jinanomu.com/" target="_blank" rel="noopener"><span className="ic b">B</span>개인 블로그</a>
             <a href="https://blog.naver.com/cplajjn" target="_blank" rel="noopener"><span className="ic n">N</span>네이버 블로그</a>
+            <a href="https://www.threads.com/@jinanomu" target="_blank" rel="noopener"><span className="ic t">@</span>스레드</a>
             <a href="http://pf.kakao.com/_AxmxdJn" target="_blank" rel="noopener"><span className="ic k">K</span>카카오톡 상담</a>
             <a href="https://map.naver.com/p/search/%EB%85%B8%EB%AC%B4%EB%B2%95%EC%9D%B8%20%EC%A0%84%EC%8A%B9%20%EC%B2%9C%EC%95%88" target="_blank" rel="noopener"><span className="ic p">P</span>네이버 플레이스</a>
             <a href="https://g.page/r/CXpdPSZ6A4y9EBM/review" target="_blank" rel="noopener"><span className="ic g">G</span>구글 리뷰</a>
