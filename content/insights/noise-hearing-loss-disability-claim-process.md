@@ -18,7 +18,7 @@ faq:
 
 소음성 난청 장해급여를 청구하면 근로복지공단은 과거에 어떤 소음 속에서 얼마나 일했는지와 현재 청력손실이 어느 정도인지를 확인합니다. 소음에 노출된 근무 이력과 청력검사 결과를 조사하고 필요한 경우 특별진찰을 거쳐 업무관련성과 장해 정도를 각각 판단하는 구조여서, 두 자료가 갖춰져야 업무상 질병 인정 여부와 장해등급이 정해집니다. 청구 전에 준비할 자료부터 결정 후 확인할 내용까지 순서대로 살펴봅니다.
 
-인정기준의 세 숫자와 장해등급표는 [소음성 난청 산재 인정기준 — 85데시벨·3년·40데시벨](https://sanjae.jinanomu.com/posts/noise-hearing-loss-disability-benefit/)에, 퇴직 후 청구 기한과 노인성 난청은 [퇴직하고 몇 년이 지나도 장해급여를 받을 수 있나요?](https://blog.jinanomu.com/noise-induced-hearing-loss-disability-benefit/)에 정리해 두었으므로 이 글은 진행 절차만 다룹니다.
+인정기준의 세 숫자와 장해등급표는 [소음성 난청 산재 인정기준과 장해등급](https://sanjae.jinanomu.com/posts/noise-hearing-loss-disability-benefit/)에, 퇴직 후 청구 기한과 노인성 난청은 [퇴직하고 몇 년이 지나도 장해급여를 받을 수 있나요?](https://blog.jinanomu.com/noise-induced-hearing-loss-disability-benefit/)에 정리해 두었으므로 이 글은 진행 절차만 다룹니다.
 
 ## 목차
 

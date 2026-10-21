@@ -75,6 +75,9 @@ export const services: Service[] = [
     navLabel: '산업안전·중대재해',
     heroSub:
       '중대재해처벌법이 요구하는 안전보건관리체계를 서류가 아닌 실무 수준으로 구축합니다. 사고가 난 뒤의 수사 대응이 아니라, 사고가 나지 않는 일터를 만드는 것이 전승의 일입니다.',
+    related: [
+      { title: '안전보건공단 무료 컨설팅, 무엇을 지원받나요?｜신청 절차와 수행기관 확인할 5가지', href: 'https://blog.jinanomu.com/kosha-safety-health-management-system-consulting-provider-selection/', ext: true },
+    ],
     whyTitle: '왜 지금 대비해야 하는가',
     scopeTitle: '수행 업무',
     scopeLead:
@@ -137,6 +140,10 @@ export const services: Service[] = [
     navLabel: '인사·노무 자문',
     heroSub:
       '문제가 터진 뒤에 찾는 노무사가 아니라, 문제가 생기지 않게 곁에 있는 노무사. 월 자문으로 기업의 인사노무 리스크를 상시 관리합니다.',
+    related: [
+      { title: '취업규칙 불이익 변경, 개별 동의서만 받으면 충분할까요?｜동의 주체·과반수 기준·회의 방식', href: 'https://blog.jinanomu.com/work-rules-disadvantageous-change-consent-method/', ext: true },
+      { title: '수습 중 퇴사를 권했는데 직원이 먼저 나갔다면｜해고와 합의퇴직의 판단 기준', href: 'https://blog.jinanomu.com/probation-resignation-recommendation-dismissal-or-voluntary/', ext: true },
+    ],
     whyTitle: '왜 자문이 필요한가',
     scopeTitle: '수행 업무',
     why: [
@@ -178,6 +185,9 @@ export const services: Service[] = [
     navLabel: '급여 아웃소싱',
     heroSub:
       '급여는 정확해야 하고, 제때 나가야 하고, 법에 맞아야 합니다. 계산부터 4대보험, 명세서 발급까지 전승이 통째로 맡습니다.',
+    related: [
+      { title: '급여 아웃소싱 맡길 때 확인할 것｜4대보험·급여계산·임금명세서', href: 'https://blog.jinanomu.com/payroll-outsourcing-checklist/', ext: true },
+    ],
     whyTitle: '왜 맡겨야 하는가',
     scopeTitle: '수행 업무',
     why: [
@@ -221,6 +231,11 @@ export const services: Service[] = [
     homeLabel: '부당해고·임금체불 사건 대리',
     heroSub:
       '부당해고 구제신청부터 노동청 진정·고소 대응까지. 서면과 입증이 결과를 가르는 절차에서, 공인노무사가 대리인으로 함께합니다.',
+    related: [
+      { title: '카톡·문자·구두로 받은 해고 통보, 효력이 있나요｜근로자 대응 순서', href: 'https://blog.jinanomu.com/kakao-text-verbal-dismissal-notice-worker/', ext: true },
+      { title: '직원 해고 전 확인할 절차 — 서면통지와 30일 예고는 다릅니다', href: 'https://blog.jinanomu.com/dismissal-procedure-employer/', ext: true },
+      { title: '임금체불 신고 두 번이면 근로감독(노동감독) 대상, 체불 형량 5년으로 상향', href: 'https://blog.jinanomu.com/wage-arrears-repeat-report-inspection-5-years/', ext: true },
+    ],
     whyTitle: '왜 대리인이 필요한가',
     scopeTitle: '수행 업무',
     scopeLead: '기업 측·근로자 측 사건을 모두 수행합니다. 양쪽의 논리를 알기에 상대의 다음 수를 먼저 준비합니다.',
@@ -282,6 +297,8 @@ export const services: Service[] = [
     },
     related: [
       { title: '직장 내 괴롭힘 익명 신고, 회사의 조사 의무와 초기 대응', href: 'https://blog.jinanomu.com/harassment-anonymous-report-company-response/', ext: true },
+      { title: '직장 내 괴롭힘 조사 절차와 외부 조사를 검토할 5가지 상황', href: 'https://blog.jinanomu.com/harassment-formal-investigation-procedure-external-investigator/', ext: true },
+      { title: '직장 내 괴롭힘 외부 조사, 맡기기 전 확인할 6가지', href: 'https://blog.jinanomu.com/harassment-external-investigation-provider-selection-criteria/', ext: true },
     ],
     whyTitle: '왜 외부 조사가 필요한가',
     scopeTitle: '수행 업무',
@@ -336,6 +353,9 @@ export const services: Service[] = [
     navLabel: 'HR컨설팅',
     heroSub:
       '사람이 늘어나는 속도를 제도가 따라가지 못할 때 문제가 시작됩니다. 임금체계·평가제도·인사규정을 조직의 성장 단계에 맞게 설계합니다.',
+    related: [
+      { title: '성과가 낮은 직원, 평가제도부터 살펴야 하는 이유', href: 'https://blog.jinanomu.com/low-performer-evaluation-system/', ext: true },
+    ],
     whyTitle: '왜 제도 설계가 필요한가',
     scopeTitle: '수행 업무',
     why: [
@@ -377,6 +397,9 @@ export const services: Service[] = [
     navLabel: '위험성평가 컨설팅',
     heroSub:
       '위험성평가는 중대재해처벌법 대응의 심장입니다. 서류용 평가가 아니라, 현장이 실제로 안전해지고 수사에서도 인정받는 평가 체계를 만듭니다.',
+    related: [
+      { title: '위험성평가 과태료 사전통지서를 받았다면 — 회사가 먼저 확인할 것과 90일 안에 할 일', href: 'https://blog.jinanomu.com/risk-assessment-fine-company-response/', ext: true },
+    ],
     whyTitle: '왜 제대로 해야 하는가',
     scopeTitle: '수행 업무',
     why: [
@@ -461,8 +484,10 @@ export const services: Service[] = [
       { title: '산재보상 전문센터 사이트 — 질병별 인정 기준·절차·사례 모음', href: 'https://sanjae.jinanomu.com/', ext: true },
       { title: '산재 신청 가이드 — 사고·질병·출퇴근 재해의 준비 자료와 절차', href: 'https://sanjae.jinanomu.com/guide/', ext: true },
       { title: '유족 안내 — 사망 산재의 유족급여·장례비 청구', href: 'https://sanjae.jinanomu.com/family/', ext: true },
+      { title: '산재 사망 유족급여·장례비 청구 방법｜신청 절차와 청구기한', href: 'https://blog.jinanomu.com/sanjae-death-survivor-benefit/', ext: true },
       { title: '공단 결정·법원 판결 사례 모음', href: 'https://sanjae.jinanomu.com/cases/', ext: true },
-      { title: '소음성 난청 산재 인정기준 — 85데시벨·3년·40데시벨은 무엇을 뜻하나요?', href: 'https://sanjae.jinanomu.com/posts/noise-hearing-loss-disability-benefit/', ext: true },
+      { title: '소음성 난청 산재 인정기준과 장해등급｜85데시벨·3년 기준, 공장·건설 현장별 증명 자료', href: 'https://sanjae.jinanomu.com/posts/noise-hearing-loss-disability-benefit/', ext: true },
+      { title: '소음성 난청 산재, 퇴직하고 몇 년이 지나도 장해급여를 받을 수 있나요?', href: 'https://blog.jinanomu.com/noise-induced-hearing-loss-disability-benefit/', ext: true },
       { title: '프레스·단조 작업 후 난청, 소음 기록은 어디서 찾나요?', href: 'https://sanjae.jinanomu.com/posts/press-forging-impulse-noise-hearing-loss-records/', ext: true },
       { title: '형틀목공 회전근개 파열, 퇴행성이라는데 산재가 되나요?', href: 'https://sanjae.jinanomu.com/posts/formwork-carpenter-rotator-cuff-tear/', ext: true },
       { title: '출퇴근 기록이 없는데 과로 산재가 되나요? — 뇌출혈·심근경색 업무시간 다시 세우기', href: 'https://sanjae.jinanomu.com/posts/overwork-stroke-work-hours-no-records/', ext: true },
@@ -612,6 +637,9 @@ export const services: Service[] = [
       { title: '임금체불 처벌 강화, 사업주가 알아야 할 것', href: '/insights/imgeum-chebul-cheobeol-2026/' },
       { title: '취업규칙 작성과 변경 절차', href: 'https://blog.jinanomu.com/work-rules-drafting-amendment-procedure/', ext: true },
       { title: '급여 아웃소싱 맡길 때 확인할 것｜4대보험·급여계산·임금명세서', href: 'https://blog.jinanomu.com/payroll-outsourcing-checklist/', ext: true },
+      { title: '직원 한 명의 익명 신고로 근로감독이 나오나요｜신고 종류별 처리 절차와 회사가 할 일', href: 'https://blog.jinanomu.com/anonymous-report-labor-inspection/', ext: true },
+      { title: '근로감독에서 근로계약서는 어디까지 보나요｜필수 기재 항목·교부 확인·흔한 지적 사례', href: 'https://blog.jinanomu.com/labor-inspection-employment-contract-check/', ext: true },
+      { title: '연차 관리 대장이 없으면? 근로감독에서 확인하는 기록과 정산 기준', href: 'https://blog.jinanomu.com/labor-inspection-annual-leave-records/', ext: true },
     ],
     faqs: [
       {

@@ -109,6 +109,8 @@ faq:
 ## 함께 읽기
 
 - 이미 해고 통보를 받았다면: [부당해고 구제신청 3개월 기한, 절차와 준비서류 총정리](/insights/budanghaego-guje-sincheong-3gaewol/)
+- 해고 통보를 카톡이나 말로 받았다면: [카톡·문자·구두로 받은 해고 통보, 효력이 있나요｜근로자 대응 순서](https://blog.jinanomu.com/kakao-text-verbal-dismissal-notice-worker/)
+- 사업주가 수습 직원에게 퇴사를 권한 경우: [수습 중 퇴사를 권했는데 직원이 먼저 나갔다면｜해고와 합의퇴직의 판단 기준](https://blog.jinanomu.com/probation-resignation-recommendation-dismissal-or-voluntary/)
 
 ## 근거
 

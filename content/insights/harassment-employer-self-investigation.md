@@ -83,6 +83,8 @@ faq:
 
 ## 함께 읽기
 
+- 정식 조사의 순서와 외부 조사를 검토할 상황: [직장 내 괴롭힘 조사 절차와 외부 조사를 검토할 5가지 상황](https://blog.jinanomu.com/harassment-formal-investigation-procedure-external-investigator/)
+- 외부 조사기관을 고를 때 확인할 것: [직장 내 괴롭힘 외부 조사, 맡기기 전 확인할 6가지](https://blog.jinanomu.com/harassment-external-investigation-provider-selection-criteria/)
 - 괴롭힘으로 생긴 정신질환의 산재 문제: [퇴직 압박으로 생긴 우울증·적응장애, 괴롭힘이 아니어도 산재가 되나요?](/insights/jeongsin-jilhwan-sanjae-toejik-apbak/)
 
 ## 근거
