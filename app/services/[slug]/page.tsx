@@ -197,6 +197,39 @@ export default async function ServicePage({
         </div>
       </section>
 
+      {svc.fee && (
+        <section style={{ paddingTop: 0 }} id="fee">
+          <div className="wrap">
+            <div className="sec-head left">
+              <div className="eyebrow">FEE</div>
+              <h2 className="serif">{svc.fee.title}</h2>
+              <p>{svc.fee.lead}</p>
+            </div>
+            <div className="region-wrap">
+              <table className="region-table fee-table">
+                <thead>
+                  <tr>
+                    <th>기준</th>
+                    <th>비용에 반영되는 내용</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {svc.fee.rows.map((r) => (
+                    <tr key={r.factor}>
+                      <td>
+                        <b>{r.factor}</b>
+                      </td>
+                      <td>{r.desc}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            {svc.fee.note && <p className="fee-note">{svc.fee.note}</p>}
+          </div>
+        </section>
+      )}
+
       {svc.regions && (
         <section style={{ paddingTop: 0 }}>
           <div className="wrap">
