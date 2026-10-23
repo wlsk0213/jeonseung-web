@@ -28,6 +28,25 @@ export const PERSON_SAME_AS = [
 export const PERSON_DESC =
   '전지나 노무사는 산업안전·중대재해, 산재보상, 직장 내 괴롭힘 분야를 중심으로 활동하는 공인노무사로, 노무법인 전승의 대표이며 충청남도 갑질·괴롭힘 예방 안심노무사다.';
 
+// 자격·이수 교육 — 허브 lib/site.ts의 quals(4개) + trainingCredentials 와 같은 내용·순서를 유지한다.
+// 자격이나 수료가 늘면 허브 lib/site.ts → 이 파일 → 산재 lib/person.ts 순으로 함께 고친다. 수료번호는 넣지 않는다(대표 지시 2026-10-23).
+export const PERSON_TRAINING_CREDENTIALS = [
+  {
+    '@type': 'EducationalOccupationalCredential',
+    name: '제4기 직장 내 괴롭힘 조사실무과정(법률전문가) 수료',
+    credentialCategory: 'certificate',
+    recognizedBy: { '@type': 'Organization', name: '한국고용노동교육원' },
+    dateCreated: '2026-10-20',
+  },
+];
+export const PERSON_CREDENTIALS = [
+  ...['공인노무사', '산업안전기사', 'ISO45001 심사원', 'ESG 심사원'].map((q) => ({
+    '@type': 'EducationalOccupationalCredential',
+    name: q,
+  })),
+  ...PERSON_TRAINING_CREDENTIALS,
+];
+
 /** 모든 자리에 공통으로 들어가는 최소 Person. 자리별 속성은 `{ ...personBase, ... }`로 덧붙인다. */
 export const personBase = {
   '@type': 'Person',
@@ -46,4 +65,5 @@ export const personFull = {
   worksFor: { '@type': 'LegalService', name: '노무법인 전승', url: 'https://jeonseung.co.kr' },
   knowsAbout: ['산업안전', '중대재해처벌법', '산업재해 보상', '직장 내 괴롭힘 조사', '인사노무 자문'],
   memberOf: { '@type': 'Organization', name: '한국공인노무사회' },
+  hasCredential: PERSON_CREDENTIALS,
 };

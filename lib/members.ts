@@ -7,6 +7,7 @@ export interface Member {
   edu?: string[];
   careerNow?: string[];
   careerPast?: string[];
+  training?: string[]; // 교육 이수(수료) — 위촉·위원 수에 넣지 않는다
   pending?: boolean; // 프로필 자료 대기
 }
 
@@ -55,6 +56,7 @@ export const members: Member[] = [
       '충청남도 정책자문위원',
       '천안시 청년정책네트워크 위원',
     ],
+    training: ['한국고용노동교육원 제4기 직장 내 괴롭힘 조사실무과정(법률전문가) 수료 (2026)'],
   },
   {
     name: '임종석',

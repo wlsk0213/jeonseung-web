@@ -106,6 +106,16 @@ export default function MembersPage() {
                             </ul>
                           </div>
                         )}
+                        {m.training && m.training.length > 0 && (
+                          <div className="member-block">
+                            <h4>교육 이수</h4>
+                            <ul>
+                              {m.training.map((t) => (
+                                <li key={t}>{t}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
                       </div>
                     )}
                   </article>

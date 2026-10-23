@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import CtaBand from '@/components/CtaBand';
 import { services, getService } from '@/lib/services';
-import { personBase } from '@/lib/person';
+import { personBase, PERSON_TRAINING_CREDENTIALS } from '@/lib/person';
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -66,7 +66,7 @@ export default async function ServicePage({
           },
           employee: {
             ...personBase,
-            hasCredential: ['충청남도 갑질·괴롭힘 예방 안심노무사', '충청남도의회 갑질 상담 조사관'],
+            hasCredential: ['충청남도 갑질·괴롭힘 예방 안심노무사', '충청남도의회 갑질 상담 조사관', ...PERSON_TRAINING_CREDENTIALS],
           },
         },
         ...(svc.proof
