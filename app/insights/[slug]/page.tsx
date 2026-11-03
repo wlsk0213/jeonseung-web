@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import CtaBand from '@/components/CtaBand';
 import { getAllInsights, getInsight, categoryId, fmtDate } from '@/lib/insights';
 import { personBase, PERSON_URL } from '@/lib/person';
+import { relatedExternal } from '@/lib/related-external';
 
 const SITE = 'https://jeonseung.co.kr';
 const AUTHOR_C =
@@ -49,6 +50,7 @@ export default async function InsightPost({
   const related = getAllInsights()
     .filter((p) => p.category === post.category && p.slug !== post.slug)
     .slice(0, 3);
+  const external = relatedExternal(post);
 
   const articleJsonLd = {
     '@context': 'https://schema.org',
@@ -172,6 +174,19 @@ export default async function InsightPost({
                     <h3>{p.title}</h3>
                     <span className="date">{fmtDate(p.date)}</span>
                   </Link>
+                ))}
+              </div>
+            </div>
+          )}
+          {external.length > 0 && (
+            <div className="related">
+              <h2>전지나 노무사의 다른 채널 글</h2>
+              <div className="post-list">
+                {external.map((e) => (
+                  <a className="post-card" href={e.href} target="_blank" rel="noopener" key={e.href}>
+                    <span className="cat">{e.site} ↗</span>
+                    <h3>{e.title}</h3>
+                  </a>
                 ))}
               </div>
             </div>
