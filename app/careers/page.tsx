@@ -11,8 +11,8 @@ const job = {
   datePosted: '2026-11-06',
   title: '인사·노무 사무직 채용 (천안 본사)',
   summary:
-    '노무법인 전승 천안 본사에서 거래처 급여계산·4대보험 업무와 사무, 온라인 홍보를 함께할 인사·노무 사무직 1명을 채용합니다. 정규직이며 경력·학력·자격은 묻지 않습니다.',
-  poster: { src: '/careers/hiring-poster-2026-11.webp', full: '/careers/hiring-poster-2026-11.jpg' },
+    '노무법인 전승 천안 본사에서 거래처 급여계산·4대보험 업무와 사무, 온라인 홍보를 함께할 인사·노무 사무직 1명을 채용합니다.',
+  poster: { src: '/careers/hiring-poster-2026-11-v2.webp', full: '/careers/hiring-poster-2026-11-v2.jpg' },
   applyEmail: 'jjn@hrjs.co.kr',
   applySubject: '인사·노무 사무직 지원_성명',
   overview: [
@@ -70,7 +70,7 @@ const job = {
     ['고용 형태', '기간의 정함이 없는 근로계약'],
   ],
   preferred: [
-    '문서·스프레드시트·프레젠테이션·회계프로그램 활용 가능자',
+    '문서, 스프레드시트, 인사노무프로그램 활용 가능자',
     'PC·AI 활용 능력 보유자',
     '경영·법학 전공자',
     '적극적인 태도와 배움의 의지로 동료와 협력하는 분',
