@@ -4,6 +4,7 @@ import { services } from '@/lib/services';
 import { newsItems } from '@/lib/news';
 import { hrNewsItems } from '@/lib/hrnews';
 import { getAllInsights, fmtDate } from '@/lib/insights';
+import { EXTERNAL_POSTS } from '@/lib/related-external';
 
 const workDesc: Record<string, string> = {
   'industrial-safety': '중대재해처벌법이 요구하는 안전보건관리체계를 구축하고, 반기 점검까지 관리합니다.',
@@ -52,6 +53,12 @@ const faqJsonLd = {
 
 export default function Home() {
   const latestInsights = getAllInsights().slice(0, 3);
+  // 산재보상 전문센터 사이트·개인 블로그 최근 글 각 3편(홈에서 개별 글로 바로 연결)
+  const byDate = [...EXTERNAL_POSTS].sort((a, b) => b.date.localeCompare(a.date));
+  const latestExternal = [
+    ...byDate.filter((e) => e.site === '산재보상 전문센터').slice(0, 3),
+    ...byDate.filter((e) => e.site === '전지나 노무사 블로그').slice(0, 3),
+  ];
   return (
     <main>
       <script
@@ -222,6 +229,25 @@ export default function Home() {
             <Link href="/insights/" className="more-link">
               인사이트 전체 보기 →
             </Link>
+          </p>
+
+          <h3 className="ext-head">전지나 노무사의 다른 채널 최근 글</h3>
+          <div className="ins-grid">
+            {latestExternal.map((e) => (
+              <a className="ins" href={e.href} target="_blank" rel="noopener" key={e.href}>
+                <span className="cat">{e.site} ↗</span>
+                <h3>{e.title}</h3>
+                <span className="date">{fmtDate(e.date)} · 전지나 노무사</span>
+              </a>
+            ))}
+          </div>
+          <p style={{ textAlign: 'center', marginTop: 28, display: 'flex', gap: 24, justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a href="https://sanjae.jinanomu.com/" target="_blank" rel="noopener" className="more-link">
+              산재보상 전문센터 사이트 →
+            </a>
+            <a href="https://blog.jinanomu.com/" target="_blank" rel="noopener" className="more-link">
+              전지나 노무사 블로그 →
+            </a>
           </p>
         </div>
       </section>

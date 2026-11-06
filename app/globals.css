@@ -458,3 +458,5 @@ footer .nap b{color:var(--silver-300);font-weight:500}
 .fee-table td:first-child{white-space:nowrap;width:1%}
 .fee-note{font-size:14px;color:var(--silver-600);margin-top:12px}
 @media (max-width:640px){.fee-table td:first-child{white-space:normal;width:auto}}
+
+.ext-head{font-size:18px;font-weight:700;color:var(--navy-800);text-align:center;margin:56px 0 20px;text-wrap:balance}

@@ -26,6 +26,8 @@ const bl = (slug: string, title: string, date: string, cats: string[]): External
 
 export const EXTERNAL_POSTS: ExternalPost[] = [
   // 산재보상 전문센터 사이트
+  sj('retired-coal-miner-noise-hearing-loss-decades-later', '퇴직한 지 오래된 광부도 소음성 난청 산재가 되나요?｜채탄·굴진·선탄, 판결에서 다툼이 된 네 가지 사정', '2026-11-06'),
+  sj('stone-foundry-lung-cancer-crystalline-silica', '석재 가공이나 주물 일을 오래 했는데 폐암, 산재가 되나요?｜결정형 유리규산 인정 기준과 법원 사례', '2026-11-04'),
   sj('school-cafeteria-cook-rotator-cuff-tear-sanjae', '급식실 조리원 어깨 회전근개 파열도 산재가 되나요?｜고시의 10년 기준과 퇴행성 소견의 판단', '2026-11-02'),
   sj('sanjae-reclaim-after-withdrawal-or-rejection', '산재 신청을 취소했거나 불승인됐다면 다시 청구할 수 있나요?｜재청구 기간과 준비', '2026-10-30'),
   sj('noise-hearing-loss-approved-cases-by-occupation', '광부·조선·항만·건설, 직종별 소음성 난청은 어떻게 인정받았나요?｜법원이 공단 결정을 뒤집은 사례 10', '2026-10-28'),
@@ -46,6 +48,8 @@ export const EXTERNAL_POSTS: ExternalPost[] = [
   sj('noise-hearing-loss-disability-benefit', '소음성 난청 산재 인정기준과 장해등급｜85데시벨·3년 기준, 공장·건설 현장별 증명 자료', '2026-09-30'),
 
   // 개인 블로그
+  bl('employee-quits-without-handover-employer-response', '직원이 인수인계 없이 갑자기 그만뒀어요, 회사는 무엇부터 해야 하나요?｜결근 처리·손해배상·퇴사 정산', '2026-11-06', HR),
+  bl('harassment-one-time-verbal-abuse-criteria', '한 번의 폭언이나 욕설도 직장 내 괴롭힘이 되나요?｜일회성 발언 판단 기준', '2026-11-04', HARASS),
   bl('labor-inspection-wage-ledger-payslip-check', '근로감독에서 임금명세서·임금대장은 무엇을 보나요｜필수 항목과 대조 순서', '2026-11-02', HR),
   bl('harassment-settlement-employer-liability', '직장 내 괴롭힘 신고를 조사 없이 화해로 끝내거나 약식종결하면 회사도 손해배상하나요?', '2026-10-30', HARASS),
   bl('former-employee-overtime-pay-complaint-employer', '퇴사자가 연장수당 체불 진정을 넣었을 때 사업주 대응', '2026-10-28', HR),
@@ -75,6 +79,7 @@ export const EXTERNAL_POSTS: ExternalPost[] = [
 
 // 낱말 점수로 잘 안 잡히는 글은 여기서 먼저 고정한다(인사이트 slug → 외부 글 주소 끝부분).
 const PINS: Record<string, string[]> = {
+  'harassment-perpetrator-discipline-level-criteria': ['harassment-one-time-verbal-abuse-criteria'],
   'jeongsin-jilhwan-sanjae-toejik-apbak': ['workplace-harassment-adjustment-disorder-sanjae'],
   'noise-hearing-loss-disability-claim-process': ['noise-hearing-loss-approved-cases-by-occupation', 'noise-induced-hearing-loss-disability-benefit'],
   'gwongosajik-budanghaego': ['probation-resignation-recommendation-dismissal-or-voluntary', 'dismissal-procedure-employer', 'kakao-text-verbal-dismissal-notice-worker'],
