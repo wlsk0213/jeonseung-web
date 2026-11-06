@@ -460,3 +460,7 @@ footer .nap b{color:var(--silver-300);font-weight:500}
 @media (max-width:640px){.fee-table td:first-child{white-space:normal;width:auto}}
 
 .ext-head{font-size:18px;font-weight:700;color:var(--navy-800);text-align:center;margin:56px 0 20px;text-wrap:balance}
+/* careers */
+.post-body a.apply-btn{display:inline-block;margin:4px 0 8px;padding:13px 26px;border-radius:6px;background:var(--navy-800);color:#fff;font-weight:700;font-size:15px;text-decoration:none}
+.post-body a.apply-btn:hover{background:var(--navy-900)}
+.post-body a.apply-btn:focus-visible{outline:3px solid var(--navy-600);outline-offset:2px}

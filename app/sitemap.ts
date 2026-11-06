@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/press/`, priority: 0.7 },
     { url: `${base}/hrnews/`, priority: 0.6 },
     { url: `${base}/contact/`, priority: 0.7 },
+    { url: `${base}/careers/`, lastModified: '2026-11-06', priority: 0.5 },
     ...services.map((s) => ({ url: `${base}/services/${s.slug}/`, priority: 0.9 })),
     { url: `${base}/insights/`, priority: 0.8 },
     ...getAllInsights().map((p) => ({
