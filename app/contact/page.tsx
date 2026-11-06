@@ -87,6 +87,24 @@ export default function ContactPage() {
                 </select>
               </div>
               <div className="row">
+                <label htmlFor="f-source">
+                  저희를 알게 된 경로 <span className="req">*</span>
+                </label>
+                <select id="f-source" name="알게된경로" required defaultValue="">
+                  <option value="" disabled>
+                    선택해주세요
+                  </option>
+                  <option>네이버 검색·네이버 블로그</option>
+                  <option>구글 검색</option>
+                  <option>AI 답변 (ChatGPT·퍼플렉시티·제미나이 등)</option>
+                  <option>지인·거래처 소개</option>
+                  <option>기존 고객</option>
+                  <option>스레드·카카오톡 채널 등 SNS</option>
+                  <option>교육·강의·기관 행사</option>
+                  <option>기타</option>
+                </select>
+              </div>
+              <div className="row">
                 <label htmlFor="f-name">
                   성함 / 회사명 <span className="req">*</span>
                 </label>
