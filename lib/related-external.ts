@@ -26,6 +26,11 @@ const bl = (slug: string, title: string, date: string, cats: string[]): External
 
 export const EXTERNAL_POSTS: ExternalPost[] = [
   // 산재보상 전문센터 사이트
+  sj('care-worker-lower-back-injury-accident-or-disease', '요양보호사가 어르신을 옮기다 허리를 다쳤다면 산재가 되나요?｜척추압박골절과 허리디스크, 사고와 질병으로 나뉘는 기준', '2026-11-18'),
+  sj('shipyard-welding-grinding-noise-hearing-loss-normal-exit-test', '조선소에서 용접·사상 일을 했는데 퇴직 때 청력검사는 정상이었다면, 소음성 난청 산재가 되나요?｜특수건강진단 기록과 협력업체 근무 경력', '2026-11-16'),
+  sj('sanjae-temporary-disability-benefit-calculation', '산재 휴업급여는 얼마나, 어떻게 받나요?｜평균임금 70% 계산과 저소득·고령자 기준, 청구 방법', '2026-11-13'),
+  sj('formwork-carpenter-knee-osteoarthritis-joint-replacement-sanjae', '형틀목공으로 일하다 무릎 인공관절 수술을 받았다면 산재가 되나요?｜무릎관절증의 업무관련성과 장해급여', '2026-11-11'),
+  sj('bus-taxi-driver-stroke-heart-attack-sanjae', '버스·택시 기사가 뇌출혈·심근경색으로 쓰러졌다면 산재가 되나요?｜배차표·운행기록으로 보는 업무시간과 대기시간', '2026-11-09'),
   sj('retired-coal-miner-noise-hearing-loss-decades-later', '퇴직한 지 오래된 광부도 소음성 난청 산재가 되나요?｜채탄·굴진·선탄, 판결에서 다툼이 된 네 가지 사정', '2026-11-06'),
   sj('stone-foundry-lung-cancer-crystalline-silica', '석재 가공이나 주물 일을 오래 했는데 폐암, 산재가 되나요?｜결정형 유리규산 인정 기준과 법원 사례', '2026-11-04'),
   sj('school-cafeteria-cook-rotator-cuff-tear-sanjae', '급식실 조리원 어깨 회전근개 파열도 산재가 되나요?｜고시의 10년 기준과 퇴행성 소견의 판단', '2026-11-02'),
