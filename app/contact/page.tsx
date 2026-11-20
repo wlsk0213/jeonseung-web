@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContactPrefill from '@/components/ContactPrefill';
 
 export const metadata: Metadata = {
   title: '상담 신청',
@@ -52,15 +53,24 @@ export default function ContactPage() {
                   </a>
                 </li>
               </ul>
+              <p className="ch-cta">
+                비용이 궁금하시면 <a href="/consultation/">기업 상담 도우미</a>에서 몇 가지 항목을 고르고 예상 비용을 먼저
+                확인해 보세요.
+              </p>
             </aside>
 
             <form
+              id="form"
               className="cform"
               action="https://formsubmit.co/26e62d762e56ca7ac088cc7b443c573a"
               method="POST"
             >
               <input type="hidden" name="_subject" value="[홈페이지 상담신청] 새 문의가 접수되었습니다" />
               <input type="hidden" name="_template" value="table" />
+              {/* 기업 상담 도우미에서 넘어온 경우에만 채워짐 — 메일 표에 그대로 찍힘 */}
+              <input type="hidden" id="h-service" name="도우미_서비스" defaultValue="(도우미 미사용)" />
+              <input type="hidden" id="h-quote" name="도우미_제시_견적" defaultValue="-" />
+              <input type="hidden" id="h-answers" name="도우미_선택_내용" defaultValue="-" />
               <input type="hidden" name="_captcha" value="false" />
               <input
                 type="hidden"
@@ -141,6 +151,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      <ContactPrefill />
     </main>
   );
 }

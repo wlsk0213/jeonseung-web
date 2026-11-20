@@ -88,6 +88,9 @@ export default function Home() {
             <Link href="/contact/" className="btn-solid">
               상담 문의하기
             </Link>
+            <Link href="/consultation/" className="btn-accent">
+              기업 상담 도우미 · 비용 알아보기
+            </Link>
             <a href="#work" className="btn-line">
               업무분야 보기
             </a>

@@ -69,6 +69,7 @@ export default function Header() {
                 <Link href="/hrnews/">판례·안전</Link>
               </div>
             </div>
+            <Link href="/consultation/">비용 알아보기</Link>
             <Link href="/#faq">자주 묻는 질문</Link>
           </nav>
           <Link href="/contact/" className="nav-cta">
