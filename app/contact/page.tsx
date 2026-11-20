@@ -88,12 +88,10 @@ export default function ContactPage() {
               </div>
               <div className="row">
                 <label htmlFor="f-source">
-                  저희를 알게 된 경로 <span className="req">*</span>
+                  저희를 알게 된 경로 (선택)
                 </label>
-                <select id="f-source" name="알게된경로" required defaultValue="">
-                  <option value="" disabled>
-                    선택해주세요
-                  </option>
+                <select id="f-source" name="알게된경로" defaultValue="">
+                  <option value="">선택 안 함</option>
                   <option>네이버 검색·네이버 블로그</option>
                   <option>구글 검색</option>
                   <option>AI 답변 (ChatGPT·퍼플렉시티·제미나이 등)</option>
@@ -135,8 +133,9 @@ export default function ContactPage() {
                 상담 신청하기
               </button>
               <p className="privacy">
-                입력하신 정보는 상담 목적으로만 사용되며, 노무법인 전승 이메일(jjn@hrjs.co.kr)로
-                전달됩니다. 상담 내용은 공인노무사법에 따라 비밀이 보장됩니다.
+                입력하신 정보는 상담 목적으로만 사용되며, 양식 전달 서비스(FormSubmit, 국외)를 거쳐 노무법인 전승
+                이메일(jjn@hrjs.co.kr)로 전달됩니다. 상담 내용은 공인노무사법에 따라 비밀이 보장됩니다. 자세한 내용은{' '}
+                <a href="/privacy/">개인정보 처리방침</a>을 확인해 주세요.
               </p>
             </form>
           </div>

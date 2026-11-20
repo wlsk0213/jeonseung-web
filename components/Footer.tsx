@@ -22,6 +22,8 @@ export default function Footer() {
           대표 전지나 · 사업자등록번호 657-88-02118
           <br />
           대표전화 041-417-1915 · 팩스 041-417-1916
+          <br />
+          <a href="/privacy/" className="privacy-link">개인정보 처리방침</a>
           <br />© 노무법인 전승. All rights reserved.
         </div>
       </div>

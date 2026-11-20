@@ -190,6 +190,15 @@ footer .nap{text-align:right;line-height:2}
 footer .channels{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px 18px}
 footer .channels a{color:var(--silver-300);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.25)}
 footer .channels a:hover{color:#fff}
+footer .privacy-link{color:var(--silver-300);font-weight:700;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.25)}
+.policy{max-width:820px}
+.policy h2{font-size:19px;margin:34px 0 10px}
+.policy p,.policy li{line-height:1.85}
+.policy ul,.policy ol{padding-left:20px;margin:8px 0}
+.policy .tbl{overflow-x:auto;margin:10px 0}
+.policy table{border-collapse:collapse;width:100%;font-size:14px;min-width:640px}
+.policy th,.policy td{border:1px solid var(--line,#d9dde6);padding:8px 10px;vertical-align:top;text-align:left}
+.policy th{background:#f3f5f9}
 .dd .sub a.ext{color:var(--navy-600);font-weight:700}
 .profile .bio-links{margin-top:10px;font-size:14px}
 .profile .bio-links a{color:var(--navy-600);font-weight:700}
