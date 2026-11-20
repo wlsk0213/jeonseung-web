@@ -4,7 +4,7 @@ import ConsultHelper from '@/components/ConsultHelper';
 export const metadata: Metadata = {
   title: '기업 상담 도우미',
   description:
-    '급여대행·노무자문, 직장 내 괴롭힘 외부조사, 근로감독 대응, 안전보건체계 구축, 위험성평가, HR컨설팅 — 몇 가지 항목을 고르면 노무법인 전승의 예상 비용 또는 상담 범위를 정리해 드립니다.',
+    '급여대행·노무자문, 직장 내 괴롭힘 외부조사, 근로감독 대응, 안전보건체계 구축, 위험성평가, HR컨설팅, 강의·교육 의뢰 — 몇 가지 항목을 고르면 노무법인 전승의 예상 비용 또는 상담 범위를 정리해 드립니다.',
   alternates: { canonical: '/consultation/' },
 };
 

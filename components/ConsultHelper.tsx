@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // 기업 상담 도우미 — 단가 기준: 견적 업무 지침(2026.11.1. 시행) 4-2·4-4, 대표 확정 11-20
 // 금액은 모두 부가세 별도·상담 후 확정. HR컨설팅·위험성평가는 금액 비공개(대표 결정 11-20).
@@ -29,6 +29,7 @@ const TOPICS = {
   safety: { title: '안전보건체계 구축 컨설팅', desc: '중대재해처벌법·원청 평가 대비 범위와 시작 금액', inquiry: '산업안전·중대재해 컨설팅', link: '/services/industrial-safety/' },
   risk: { title: '위험성평가 컨설팅', desc: '사업장 현황에 맞는 지원 범위', inquiry: '산업안전·중대재해 컨설팅', link: '/services/risk-assessment/' },
   hr: { title: 'HR컨설팅', desc: '임금·평가·직무 등 개선 과제 정리', inquiry: '기업 자문 (인사노무·급여·HR)', link: '/services/hr-consulting/' },
+  lecture: { title: '강의·교육 의뢰', desc: '기관 교육·법정의무교육 출강 요청', inquiry: '교육 출강 의뢰', link: '/services/education/' },
 } as const;
 type Topic = keyof typeof TOPICS;
 
@@ -92,6 +93,19 @@ const GROUPS: Record<Topic, Q[][]> = {
     [
       q('current', '위험성평가를 해 본 적이 있나요?', ['한 번도 하지 않음', '했지만 오래됨', '매년 하고 있음', '확인 필요']),
       q('need', '어떤 도움이 필요하신가요?', ['최초 실시', '정기·수시 평가 대행', '근로자 참여·교육 지원', '감독·평가 대비 서류 정비'], { type: 'multi' }),
+    ],
+  ],
+  lecture: [
+    [
+      q('org', '어떤 기관인가요?', ['공공기관', '민간기업', '학교·연구기관', '협회·단체', '기타']),
+      q('topics', '원하시는 교육 주제를 골라 주세요', ['직장 내 괴롭힘·성희롱 예방 교육', '직장 내 괴롭힘 조사 실무', '관리자를 위한 노동법', '중대재해처벌법과 안전보건관리체계', '노동관계법령 기초', '기타·상담 후 정리'], { type: 'multi' }),
+      q('audience', '교육 대상은 누구인가요?', ['전 직원(법정의무교육)', '관리자·임원', '인사·노무 담당자', '조사위원·고충처리 담당자', '기타']),
+    ],
+    [
+      q('people', '교육 인원은 몇 명인가요?', null, { type: 'number', unknown: true }),
+      q('hours', '희망 교육 시간은 어느 정도인가요?', ['1시간', '2시간', '3시간 이상', '협의']),
+      q('mode', '교육 방식은 어떻게 하시나요?', ['방문(대면)', '온라인', '협의']),
+      q('timing', '희망 시기는 언제인가요?', ['이번 달', '다음 달', '2~3개월 뒤', '협의']),
     ],
   ],
   hr: [
@@ -217,6 +231,17 @@ function getResult(topic: Topic, a: Answers): Result {
       ],
       quote: `300만 원부터 (규모·과업 확인 후 확정 / 부가세 별도)`,
     };
+  if (topic === 'lecture')
+    return {
+      label: '강의·교육 의뢰',
+      headline: '요청에 따른 강의 견적안을 보내 드립니다',
+      paragraphs: [
+        `주제: ${(a.topics as string[]).join(' · ')} · 대상: ${a.audience}`,
+        '대상과 시간에 맞춘 목차, 소요 시간, 강의료 견적을 회신해 드립니다. 기관 내부 사례를 반영해야 하면 사전 인터뷰 일정을 잡습니다.',
+        '일정이 확정되면 교육 자료(PDF)와 수료 확인에 필요한 서류를 준비합니다.',
+      ],
+      quote: `강의 의뢰 — ${a.hours} · ${a.mode} · ${a.timing} (강의 견적안 회신)`,
+    };
   if (topic === 'risk')
     return {
       label: '위험성평가 컨설팅',
@@ -247,6 +272,15 @@ export default function ConsultHelper() {
   const [error, setError] = useState('');
 
   const set = (k: string, v: string | string[]) => setAnswers((p) => ({ ...p, [k]: v }));
+
+  // ?topic=lecture 처럼 들어오면 해당 메뉴로 바로 시작(개인 홈페이지 강의 페이지 버튼)
+  useEffect(() => {
+    const t0 = new URLSearchParams(location.search).get('topic');
+    if (t0 && t0 in TOPICS) {
+      setTopic(t0 as Topic);
+      setStep(1);
+    }
+  }, []);
   const steps = ['서비스 선택', '기본 정보', '상담 조건', '안내·문의'];
 
   function next() {
