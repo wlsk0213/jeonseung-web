@@ -35,7 +35,9 @@ export default function HrNewsPage() {
                     <span className="bd">{n.date}</span>
                   </summary>
                   <div className="board-body">
-                    <p>{n.body}</p>
+                    {n.body.split('\n\n').map((para, k) => (
+                      <p key={k}>{para}</p>
+                    ))}
                     {n.attachments && n.attachments.length > 0 && (
                       <div className="att">
                         <div className="att-h">관련 자료</div>
